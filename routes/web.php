@@ -56,6 +56,3 @@ Route::prefix('Home')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
 });
 
-
-
-// hola
