@@ -10,7 +10,7 @@ use App\Http\Controllers\EquipamientosController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 
 Route::prefix('Organizacion')->group(function () {
@@ -56,3 +56,4 @@ Route::prefix('Home')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
 });
 
+Route::resource('risks', RiskController::class);
