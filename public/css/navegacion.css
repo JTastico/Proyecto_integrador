@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  
+  body{
+    background-color: #ffff;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  .barnav {
+      padding: 10px;
+      overflow: hidden;
+      background-color: #073763;
+      font-family: Arial;
+      height: 75px;
+  }
+  
+  .barnav a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+      
+  
+  .dropdown {
+      float: left;
+      overflow: hidden;
+  }
+      
+      /* Botón del desplegable */
+  .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit; 
+      margin: 0; 
+  }
+      
+      
+  .barnav a:hover, .dropdown:hover .dropbtn {
+      background-color: rgba(81, 185, 255, 0.219);
+  }
+      
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #073763;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border: 0.5px solid #DFE0DD
+  }
+      
+  .dropdown-content a {
+      float: none;
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+  }
+      
+  .dropdown-content a:hover {
+      background-color: #dfe0dd2c;
+  }
+      
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+      

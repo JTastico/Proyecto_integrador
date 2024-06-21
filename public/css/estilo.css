@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  
+  body{
+    padding: 0px 0px 100px 0px;
+    background-color: #ffff;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+/*HEADER*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header .nav {
+  display: flex;
+  gap: 20px;
+}
+.header .nav a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.header .nav a:hover {
+  color: #007BFF;
+}
+
+  
+  /*Grid__________________________________________________________________________________________*/
+
+  .grid{
+    display: grid;
+    gap: 1em;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  
+  #gridIndicadores{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+  }
+  
+  #gridIndex{
+    margin-top: 25px;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+  #gridIndex > #one{
+    grid-column: 1 / 3;
+  }
+  
+  #gridIndex > #two{
+    grid-column: 1 / 2;
+  }
+  #gridIndex > #three{
+    grid-column: 2 / 2;
+  }
+  #gridIndex > #four{
+    grid-column: 1 / 2;
+  }
+  #gridIndex > #five{
+    grid-column: 2 / 2;
+  }
+  #gridOpcionesFiltrado{
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  #gridOpcionesFiltrado > #one{
+    grid-column: 1/3;
+  }
+  #gridOpcionesFiltrado > #two{
+    grid-column: 1/1;
+  }
+  #gridOpcionesFiltrado > #three{
+    grid-column: 2/2;
+    grid-row:2/5;
+  }
+  #gridOpcionesFiltrado > #four{
+    grid-column: 3/3;
+  }
+  
+  /*Titulos________________________________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+  
+  .titulo{
+  position: relative;
+  margin: 10px 0px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 700;
+  font-size: xx-large;
+  color: #0B5394;
+  width: 1000px;
+  }
+  
+  .subTitulo{
+  margin: 0px 0px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: x-large;
+  color: #3D85C6;
+  }
+
+  /*Contenedores_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+  
+  .contenedorPrincipal{
+    display: inline-block;
+    background-color: #F2F2F2;
+    position: relative;
+    align-items: center;
+  }
+  
+  .contenedorSegundario{
+    display: inline-block;
+    position: relative;
+    background-color: #FDFBFB;
+  }
+  
+  .contenedorGraficos{
+    padding: 5px;
+    position: relative;
+    align-items: center;
+    background-color: #F1F5E9;
+  }
+  
+  .encabezado{
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #EDEDED;
+  display: flex;
+  text-align: left;
+  margin-bottom: 30px;
+  }
+
+  .encabezado > .titulo{
+    position: relative;
+    margin: 10px 0px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    color: #0B5394;
+    width: 1000px;
+    }
+    
+.encabezado > p{
+    margin: 10px 50px;
+    padding: 10px;
+    }
+
+.encabezado > p , select{
+    margin: 10px 5px;
+    width: 15%;
+    height: 30px;
+  }
+        
+  .etiqueta {
+    position: relative;
+    padding: 10px;
+    background-color: #DFE0DD;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: large;
+    color: #255FAD;
+    border-bottom:1.5px solid #255FAD;
+  }
+  
+  .contenedorEnContenedor{
+    margin-bottom:10px;
+    margin-right:10px;
+    position:relative;
+    float:left;
+    padding:5px;
+  }
+
+  .contenedorEnContenedor > input[type=text]{
+    margin: 20px 0px 20px 0px;
+    width: 85%;
+    height: 30px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    color: #000000;
+  }
+  
+  .contenedorEnContenedor > select{
+    margin: 20px 0px 20px 0px;
+    width: 85%;
+    height: 30px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    color: #000000;
+  }
+
+  .contenedorBordes{
+    display: inline-block;
+    border: 2px solid #305ea3;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+
+  .contenedorSinEstilo{
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  
+  .contenedorTercero{
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  .contenedorMargen{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  }
+
+  
+ /* Tablas______________________________________________________________________________________ */
+  /*
+  th , td{
+    border: 1px solid #595959;
+  }
+    
+    tr   style="background-color: #0C343D; color: #EDEDED;" */
+  
+  
+  .tablaPrincipal {
+    background-color: #ffff;
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    border-collapse: separate;
+    border: 1.5px solid #F2F2F2;
+    border-spacing: 5px;
+  }
+  
+  .tablaPrincipal > td {
+    text-align: right;
+  }
+
+  .tablaIndicadores{
+    text-align: center;
+    margin: 0px 0px;
+    border-collapse: collapse;
+    border-collapse: separate;
+    border:1px solid #989797;
+    height: 80%;
+    border-spacing: 2px;
+    overflow: auto;
+  }
+
+  .tablapaso02{
+    margin: 20px 0px 0px 0px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 2px;
+    width: 70%;
+    height: 200px;
+    border: 1.1px solid #9b9b9c;
+    border-collapse:separate;
+    border-spacing: 5px;
+  }
+  
+  .tablapaso02 > th , td{
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: small;
+  }
+  
+  .tablaRiesgosResiduales{
+    text-align: center;
+    margin: 5px 0px 0px 3px;
+    width: 99%;
+    height: 200;
+    border-collapse: collapse;
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  
+  .tablaRiesgosResiduales > th , td{
+    width: 100px;
+    padding: 10px;
+    height: 50px;
+  }
+
+  /*Botones__________________________________________________________________________________________________________*/
+  .salto{
+    position: relative;
+    clear: left;
+  }
+  
+  .botonSinEstilo{
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .botonRojo{ 
+    margin-bottom:10px;
+    margin-right:10px;
+    position:relative;
+    float:left;
+    padding:5px; 
+    background-color: #FF0000 ;
+    color: #ffff;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .botonRojo > a{
+    text-decoration: none;
+  }
+  
+  .botonAmarillo{ 
+    margin-bottom:10px;
+    margin-right:10px;
+    position:relative;
+    float:left;
+    padding:5px; 
+    background-color: #ffc400 ;
+    color: #ffff;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .botonAmarillo > a{
+    text-decoration: none;
+  }
+  
+  .botonAzul{ 
+    margin-bottom:10px;
+    margin-right:10px;
+    position:relative;
+    float:left;
+    padding:5px; 
+    color: #ffff;
+    background-color: #255FAD ;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    
+  }
+  
+  .botonAzul > a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  /* Listas______________________________________________________________________________ */
+  
+  ol > li{
+    list-style: none;
+  }
+  
+  .menu-horizontal{
+    border-radius: 3px;
+    display: flex;
+    place-content: center;
+    position: relative;
+    margin-top: 10px;
+    line-height: 0px;
+    align-items: center;
+    background-color: #0C343D;
+  }
+  
+  .menu-horizontal > p{
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 3.5%;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .menu-horizontal > p:hover{
+    color: #ddd;
+  }
+  
+
+/* Formulario___________________________________________________________________________ */
+
+  form{
+    padding: 0%;
+  }
+
+  
+  form > input[type=text]{
+    width: 100%;
+    height: 30px;
+    margin: 10.5px 0px 20px 0px;
+    border: #989797 1.5px;
+    border-style:solid;
+    border-radius: 2px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    color: #000000;
+  }
+  form > select{
+    width: 100%;
+    height: 30px;
+    margin: 10.5px 0px 20px 0px;
+    border: #989797 1.5px;
+    border-style:solid;
+    border-radius: 2px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    color: #000000;
+  }
+
+  form > div >input[type=date]{
+    width: 100%;
+    height: 30px;
+    margin: 20.5px 0px 20px 0px;
+    border: #727272 1.5px;
+    border-style:solid;
+    border-radius: 2px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    color: #000000;
+  }
+
+  form > a > i{
+    color:#255FAD;
+  }
+  
+    /* Contenido_________________________________________________ */
+  
+    .areaDeTexto > a{
+        color: black;
+        font-family: "Saira Extra Condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration-line:none ;
+      }
+      
+      .icono{
+        color: #255FAD;
+        position: center;
+      }
+.seleccion{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
