@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Riesgos extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nombre', 'descripcion', 'categoria_id', 'prioridad_id', 'fecha_creacion', 'fecha_actualizacion'
+    ];
+
+    protected $primaryKey = 'id';
+
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, 'categoria_id');
+    }
+
+    public function prioridad()
+    {
+        return $this->belongsTo(Prioridad::class, 'prioridad_id');
+    }
 }
