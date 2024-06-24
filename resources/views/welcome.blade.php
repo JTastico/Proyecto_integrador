@@ -31,7 +31,7 @@
     <!-- Documentos recientes -->
     <div id="gridIndex" class="grid">
       <div id="one" class="contenedorPrincipal" style="width: 100%; height: 100%; word-break: break-all; padding: 10px;">
-        <div class="contenedorEnContenedor" style="width: 50%;"><img src="https://www.shutterstock.com/image-photo/risk-management-process-identifying-assessing-260nw-2433121085.jpg" alt="Imagen central" style="padding-left: 45px;">
+        <div class="contenedorEnContenedor" ><img src="https://www.shutterstock.com/image-photo/risk-management-process-identifying-assessing-260nw-2433121085.jpg" alt="Imagen central" style="padding-left: 45px;">
         </div>
       <p style="font-size: 25px; padding: 0px 20px 0px 0px; white-space: pre-line">
         La gestión de riesgos implica identificar, evaluar y mitigar los riesgos que podrían 

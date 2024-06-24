@@ -10,55 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="../css/estilo.css">
+  <!-- <link rel="stylesheet" href="../css/estilo.css"> -->
+  <link rel="stylesheet" href="../css/stylerisk.css"> 
   <!--    <script src="script.js"></script>-->
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .header .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .header .nav {
-      display: flex;
-      gap: 20px;
-    }
-    .header .nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    .header .nav a:hover {
-      color: #007BFF;
-    }
-    .contenedorMargen {
-      padding: 20px;
-    }
-    .subTitulo {
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .botonAzul a {
-      text-decoration: none;
-      color: #fff;
-      background-color: #007BFF;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-    .botonAzul a:hover {
-      background-color: #0056b3;
-    }
-  </style>
 </head>
 
 <body>
