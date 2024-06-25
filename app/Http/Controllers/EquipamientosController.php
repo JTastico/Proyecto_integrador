@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Equipamiento;
 use Illuminate\Http\Request;
 
 class EquipamientosController extends Controller

@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use App\Models\Riesgos;
+use App\Models\Riesgo;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -15,7 +14,7 @@ class RiesgosController extends Controller
      */
     public function index()
     {
-        $riesgos = Riesgos::all();
+        $riesgos = Riesgo::all();
         return view('riesgos.index', compact('riesgos'));
     }
 
@@ -42,17 +41,17 @@ class RiesgosController extends Controller
             // otros campos de validación
         ]);
 
-        Riesgos::create($request->all());
+        Riesgo::create($request->all());
         return redirect()->route('riesgos.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Riesgos  $riesgos
+     * @param  \App\Models\Riesgo  $riesgo
      * @return \Illuminate\Http\Response
      */
-    public function show(Riesgos $riesgos)
+    public function show(Riesgo $riesgo)
     {
         return view('riesgos.show', compact('riesgo'));
     }
@@ -60,10 +59,10 @@ class RiesgosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Riesgos  $riesgos
+     * @param  \App\Models\Riesgo  $riesgo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Riesgos $riesgos)
+    public function edit(Riesgo $riesgo)
     {
         return view('riesgos.edit', compact('riesgo'));
     }
@@ -72,10 +71,10 @@ class RiesgosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Riesgos  $riesgos
+     * @param  \App\Models\Riesgo  $riesgo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Riesgos $riesgos)
+    public function update(Request $request, Riesgo $riesgo)
     {
         $request->validate([
             'nombre' => 'required',
@@ -89,11 +88,12 @@ class RiesgosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Riesgos  $riesgos
+     * @param  \App\Models\Riesgo  $riesgo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(string $id)
+    public function destroy(Riesgo $riesgo)
     {
-        //
+        $riesgo->delete();
+        return redirect()->route('riesgos.index');
     }
 }
