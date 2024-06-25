@@ -26,6 +26,12 @@
         <i class='bx bx-rotate-left bx-xs'></i>
         Volver a indicadores
       </a>
+
+    <button class="botonAzul">
+      <a href="{{ route('indicadores.edit') }}">
+        <i class='bx bx-rotate-left bx-xs'></i>
+        Editar indicador
+      </a>
     </button>
 
     <!-- Menú horizontal -->

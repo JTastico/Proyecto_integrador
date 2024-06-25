@@ -71,7 +71,13 @@ Route::prefix('Home')->group(function () {
     Route::get('/navigator', 'HomeController@navigator')->name('navigator');
 });
 
-Route::resource('riesgos', RiesgosController::class);
-Route::get('/riegos', 'RiegoController@index')->name('riegos.index');
+
+Route::get('/riegos', [RiesgosController::class, 'index'])->name('riegos.index');
+
+Route::get('/indicadores', [IndicadoresController::class, 'index'])->name('indicadores.index');
+Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->name('indicadores.create');
+Route::post('/indicadores', [IndicadoresController::class, 'store'])->name('indicadores.store');
+Route::get('/indicadores/{id}/edit', [IndicadoresController::class, 'edit'])->name('indicadores.edit');
+// Route::put('/indicadores/{id}', [IndicadoresController::class, 'update'])->name('indicadores.update');
 
 require __DIR__.'/auth.php';

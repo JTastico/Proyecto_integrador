@@ -53,7 +53,7 @@
             </tr>
           </table>
           <p style="margin: 10px 2.5%;">No se encontró ningún documento</p>
-          <span style="margin-left: 80%;" class="botonAzul"><a href="Documentos/documentosControlados.html">Ver todos los riesgos</a></span>
+          <span style="margin-left: 80%;" class="botonAzul"><a href="Documentos/documentosControlados.html">Registrar riesgo</a></span>
         </div>
       </div>
       <!-- Mapa de riesgos -->
