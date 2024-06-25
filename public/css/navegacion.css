@@ -18,7 +18,7 @@
       overflow: hidden;
       background-color: #073763;
       font-family: Arial;
-      height: 75px;
+      height: 85px;
   }
   
   .barnav a {
@@ -29,7 +29,11 @@
       padding: 14px 16px;
       text-decoration: none;
   }
-      
+
+  .barnav img.logo {
+    width: 120%;
+    max-width: 120%;
+}    
   
   .dropdown {
       float: left;

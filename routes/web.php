@@ -34,17 +34,6 @@ Route::prefix('Organizacion')->group(function () {
     Route::get('/estructura-organizacion', [OrganizacionController::class, 'estructuraOrganizacion'])->name('organizacion.estructura-organizacion');
 });
 
-Route::prefix('Documentos')->group(function () {
-    Route::get('/documentosControlados', [DocumentosController::class, 'documentosControlados'])->name('documentos.documentosControlados');
-    Route::get('/documentosNoControlados', [DocumentosController::class, 'documentosNoControlados'])->name('documentos.documentosNoControlados');
-    Route::get('/registrosPendientes', [DocumentosController::class, 'registrosPendientes'])->name('documentos.registrosPendientes');
-});
-
-Route::prefix('Objetivos')->group(function () {
-    Route::get('/planificacion', [ObjetivosController::class, 'planificacion'])->name('objetivos.planificacion');
-    Route::get('/gestion', [ObjetivosController::class, 'gestion'])->name('objetivos.gestion');
-    Route::get('/medicionesPendientes', [ObjetivosController::class, 'medicionesPendientes'])->name('objetivos.medicionesPendientes');
-});
 
 // Route::prefix('Riesgos')->group(function () {
 //     Route::get('/evaluacion-de-riesgos', [RiesgosController::class, 'evaluacionDeRiesgos'])->name('riesgos.evaluacion-de-riesgos');
@@ -73,5 +62,6 @@ Route::prefix('Home')->group(function () {
 
 Route::resource('riesgos', RiesgosController::class);
 Route::get('/riegos', 'RiegoController@index')->name('riegos.index');
+Route::get('/riegos', 'RiegoController@show')->name('riegos.show');
 
 require __DIR__.'/auth.php';

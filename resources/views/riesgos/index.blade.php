@@ -11,22 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!-- <link rel="stylesheet" href="../css/estilo.css"> -->
-  <link rel="stylesheet" href="../css/stylerisk.css"> 
+  <link rel="stylesheet" href="{{ asset('css/estilo.css') }}"> 
   <!--    <script src="script.js"></script>-->
 </head>
 
 <body>
   <!-- Encabezado -->
-  <div class="header">
-    <div class="logo">Gestión de Riesgos</div>
-    <div class="nav">
-      <a href="#">Home</a>
-      <a href="#">Riesgos</a>
-      <a href="#">Documentos</a>
-      <a href="#">Indicadores</a>
-    </div>
-  </div>
-  
+
   <!-- Cuerpo -->
   <div class="contenedorMargen">
     <!-- Documentos recientes -->
@@ -112,7 +103,7 @@
         <p class="subTitulo">Mapa de Riesgos Residuales</p>
         <div class="contenedorGraficos" style="width: 95%; height: 420px; margin: 0px 2.5% 0px 2.5%;">
           <table class="tablaRiesgosResiduales">
-            <tr>
+            <tr>a
               <td>MUY BAJO</td>
               <td>BAJO</td>
               <td>MEDIO</td>
