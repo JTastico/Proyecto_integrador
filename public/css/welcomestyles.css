@@ -1,0 +1,109 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+
+  .header {
+    background-color: #0C343D;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 24px;
+  }
+
+  .nav {
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  .nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  .hero {
+    background-image: url('https://www.shutterstock.com/image-photo/risk-management-process-identifying-assessing-260nw-2433121085.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .hero-text {
+    padding: 0 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .cta {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0C343D;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta:hover {
+    background-color: #1A5C6C;
+  }
+
+  .section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin: 20px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    color: #0C343D;
+    margin-bottom: 20px;
+  }
+
+  .section-content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+  }
+
+  .social-links {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-links a {
+    color: #0C343D;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #1A5C6C;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      height: 300px;
+    }
+  }

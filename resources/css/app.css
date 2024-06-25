@@ -1,43 +1,90 @@
 body {
+    margin: 0;
+    padding: 0;
+    background-color: #073763;
+    font-family: Arial, sans-serif;
+    background-image: url('../../public/img/fondoLogin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #406ee2;
 }
-.guest-layout {
+
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f5f1e8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-}
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5ede8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
 }
 
-.guest-layout, .form-container {
-    transition: all 0.3s ease-in-out;
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.guest-layout:hover, .form-container:hover {
-    transform: scale(1.05);
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.guest-layout, .form-container {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+.input-box input {
+    width: 100%;
+    padding: 10px 30px 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
     font-size: 16px;
-    line-height: 1.5;
-    color: #333;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.Recordar-olvidar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Recordar-olvidar label {
+    font-size: 14px;
+}
+
+.Recordar-olvidar a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #073763;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0a4e8e;
 }

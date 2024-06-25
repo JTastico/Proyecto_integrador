@@ -6,6 +6,7 @@ use App\Http\Controllers\RiesgosController; // Asegúrate de que sea el controla
 use App\Http\Controllers\EquipamientosController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\IndicadoresController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,10 +36,6 @@ Route::prefix('Equipamientos')->group(function () {
 Route::resource('riesgos', RiesgosController::class); // Usa el controlador correcto
 // Elimina rutas duplicadas o incorrectas
 
-Route::prefix('Home')->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home.index');
-    Route::get('/navigator', 'HomeController@navigator')->name('navigator');
-});
 
 
 Route::get('/riegos', [RiesgosController::class, 'index'])->name('riegos.index');
@@ -47,6 +44,6 @@ Route::get('/indicadores', [IndicadoresController::class, 'index'])->name('indic
 Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->name('indicadores.create');
 Route::post('/indicadores', [IndicadoresController::class, 'store'])->name('indicadores.store');
 Route::get('/indicadores/{id}/edit', [IndicadoresController::class, 'edit'])->name('indicadores.edit');
-// Route::put('/indicadores/{id}', [IndicadoresController::class, 'update'])->name('indicadores.update');
+Route::put('/indicadores/{id}', [IndicadoresController::class, 'update'])->name('indicadores.update');
 
 require __DIR__.'/auth.php';
