@@ -39,7 +39,7 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#" target="contenido">Equipamientos</a>
+            <a href="{{ route('riesgos.index') }}" target="contenido">Equipamientos</a>
           </div>
         </div>
       </div>
