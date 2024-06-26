@@ -1,0 +1,100 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .encabezado {
+    background-color: #0C343D;
+    color: #EDEDED;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .titulo {
+    margin: 0px 15px;
+    font-size: xxx-large;
+  }
+  
+  .contenedorMargen {
+    margin: 20px;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+  }
+  
+  .botonAzul {
+    background-color: #0b5394;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botonAzul:hover {
+    background-color: #083a62;
+  }
+  
+  .contenedorPrincipal {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .subTitulo {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .contenedorEnContenedor {
+    margin-bottom: 15px;
+  }
+  
+  .input-box, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  
+  .contenedorSegundario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .tablaPrincipal {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .headerTabla {
+    background-color: #0C343D;
+    color: #EDEDED;
+  }
+  
+  .filaTabla {
+    background-color: #EDEDED;
+  }
+  
+  .filaTablaAlterna {
+    background-color: #FDFBFB;
+  }
+  
+  .filaTabla td, .headerTabla th {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .bx {
+    color: #0b5394;
+    cursor: pointer;
+  }
+  

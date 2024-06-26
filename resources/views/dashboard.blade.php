@@ -17,9 +17,9 @@
           </button>
           <div class="dropdown-content">
             <a href="{{ route('riesgos.index') }}" target="contenido">Evaluacion De Riesgos</a>
-            <a href="Riesgos/Planes-de-tratamiento/planes-de-tratamiento.html" target="contenido">Planes de tratamiento</a>
-            <a href="Riesgos/planes-seguimiento.html" target="contenido">Planes de Seguimiento</a>
-            <a href="Riesgos/Configuracion/configuracion-de-riesgos.html" target="contenido">Configuracion De Riesgos</a>
+            <a href="{{ route('tratamientos.planes-tratamiento') }}" target="contenido">Planes de tratamiento</a>
+            <a href="{{ route('tratamientos.seguimiento') }}" target="contenido">Planes de Seguimiento</a>
+            <a href="{{ route('riesgos.configuracion') }}" target="contenido">Configuracion De Riesgos</a>
             <a href="Riesgos/mis-riesgos.html" target="contenido">Mis Riesgos</a>
             <a href="Riesgos/riesgos-propuestos.html" target="contenido">Riesgos Propuestos</a>
           </div>
@@ -29,11 +29,11 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="Indicadores/alta-indicadores.html" target="contenido">Alta Indicadores</a>
-            <a href="Indicadores/gestionar-indicadores.html" target="contenido">Gestión Indicadores</a>
-            <a href="Indicadores/indicadores-pendientes.html" target="contenido">Mediciones Pendientes</a>
+            <a href="{{ route('indicadores.create') }}" target="contenido">Alta Indicadores</a>
+            <a href="{{ route('indicadores.index') }}" target="contenido">Gestión Indicadores</a>
+            <a href="{{ route('indicadores.index') }}" target="contenido">Mediciones Pendientes</a>
           </div>
-        </div>
+        </div>  
         <div class="dropdown">
           <button class="dropbtn">Equipamientos
             <i class="fa fa-caret-down"></i>

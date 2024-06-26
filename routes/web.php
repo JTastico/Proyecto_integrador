@@ -7,12 +7,13 @@ use App\Http\Controllers\EquipamientosController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IndicadoresController;
+use App\Http\Controllers\TratamientosController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [WelcomeController::class, 'index'])->name('home');
+Route::get('/', [WelcomeControlCCrler::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -45,5 +46,10 @@ Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->nam
 Route::post('/indicadores', [IndicadoresController::class, 'store'])->name('indicadores.store');
 Route::get('/indicadores/{id}/edit', [IndicadoresController::class, 'edit'])->name('indicadores.edit');
 Route::put('/indicadores/{id}', [IndicadoresController::class, 'update'])->name('indicadores.update');
+Route::resource('indicadores', IndicadoresController::class);
 
+
+Route::get('/tratamientos/planes-tratamiento', [TratamientosController::class, 'planesTratamiento'])->name('tratamientos.planes-tratamiento');
+Route::get('/tratamientos/seguimiento', [TratamientosController::class, 'seguimiento'])->name('tratamientos.seguimiento');
+Route::get('/riesgos/configuracion', [RiesgosController::class, 'configuracion'])->name('riesgos.configuracion');
 require __DIR__.'/auth.php';
