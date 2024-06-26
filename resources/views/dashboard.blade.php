@@ -16,7 +16,7 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="{{ route('riesgos.show') }}" target="contenido">Evaluacion De Riesgos</a>
+            <a href="{{ route('riesgos.index') }}" target="contenido">Evaluacion De Riesgos</a>
             <a href="Riesgos/Planes-de-tratamiento/planes-de-tratamiento.html" target="contenido">Planes de tratamiento</a>
             <a href="Riesgos/planes-seguimiento.html" target="contenido">Planes de Seguimiento</a>
             <a href="Riesgos/Configuracion/configuracion-de-riesgos.html" target="contenido">Configuracion De Riesgos</a>
