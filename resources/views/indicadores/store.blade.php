@@ -45,7 +45,7 @@
       @csrf
       <!-- Sección: Datos del Indicador -->
       <div class="contenido">
-        <p class="titulo">Paso 1/2. Datos del Indicador</p>
+        <p class="titulo">Datos del Indicador</p>
         
         <!-- Denominación del Indicador -->
         <label for="denominacion" class="etiqueta">Denominación del Indicador (*)</label>

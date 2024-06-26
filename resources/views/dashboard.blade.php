@@ -29,8 +29,8 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="{{ route('indicadores.create') }}" target="contenido">Alta Indicadores</a>
-            <a href="{{ route('indicadores.index') }}" target="contenido">Gestión Indicadores</a>
+            <a href="{{ route('indicadores.create') }}" target="contenido">Nuevo Indicadores</a>
+            <a href="{{ route('indicadores.index') }}" target="contenido">Filtro Indicador</a>
             <a href="{{ route('indicadores.index') }}" target="contenido">Mediciones Pendientes</a>
           </div>
         </div>  
