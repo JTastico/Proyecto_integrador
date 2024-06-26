@@ -16,11 +16,6 @@
 <body>
 <div class="encabezado"><p class="titulo">Planes de seguimiento</p></div>
 <div class="contenedorMargen">
-    <sub class="titulo" style="font-weight: 400; font-size:x-large;">Planes de seguimiento Activos</sub>
-    <div class="salto"></div>
-    <sub class="titulo" style="font-weight: 400; font-size:x-large;">Planes de seguimiento Desactivados</sub>
-    <div class="salto"></div>
-
     <button class="botonAmarillo">Planes Seguimiento Activos</button>
     <button class="botonAmarillo">Planes Seguimiento Desactivados</button>
     <div class="salto"></div>
@@ -34,6 +29,33 @@
             <td colspan="">No se encotraron planes</td>
         </tr>
     </table>
+
+    <div class="contenedorPrincipal" style="margin-top: 15px; width: 100%; padding: 5px; padding-bottom: 15px">
+        <p class="subTitulo">Crear Plan de seguimiento</p>
+        <div class="contenedorSegundario" style="width: 100%; padding: 20px">
+            <form action="">
+                <span class="etiqueta" style="">Nombre Del Plan de Seguimiento</span>
+                <br>
+                <input type="text" placeholder="Plan de seguimiento para ...">
+                <br><br>
+                <span class="etiqueta">Pasos o Descripcion</span>
+                <br>
+                <input type="text" placeholder="Si el riesgo es ...">
+                <br><br>
+                <span class="etiqueta">En caso de que algo salga mal avisar a....</span>
+                <br><br>                
+                <div>
+                    <ol>
+                        <li><input type="checkbox" name="" id="">Gerente</li>
+                        <li><input type="checkbox" name="" id="">SubGerente</li>
+                        <li><input type="checkbox" name="" id="">Equipo de mantenimiento</li>
+                        <li><input type="checkbox" name="" id="">Etc</li>
+                    </ol>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
