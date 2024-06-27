@@ -5,6 +5,8 @@
   <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <link rel="stylesheet" href="{{ asset('css/navegacion.css') }}">
@@ -33,6 +35,7 @@
             <a href="{{ route('indicadores.create') }}" target="contenido">Nuevo Indicadores</a>
           </div>
         </div>  
+
         <div class="dropdown">
           <button class="dropbtn">Equipamientos
             <i class="fa fa-caret-down"></i>
@@ -41,20 +44,17 @@
             <a href="{{ route('equipamientos.index') }}" target="contenido">Equipamientos</a>
           </div>
         </div>
-        <div style="margin-left: 85%">
-        <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Perfil') }}
-                </x-responsive-nav-link>  
-        <form method="POST" action="{{ route('logout') }}" style="">
-                    @csrf
 
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Cerrar sesion') }}
-                    </x-responsive-nav-link>
-                </form></div>
-          <div></div>
+        <div class="dropdown profile-dropdown">
+          <button class="dropbtn"><i class='bx bxs-user'></i></button>
+          <div class="dropdown-content">
+            <x-responsive-nav-link :href="route('profile.edit')">{{ __('Perfil') }}</x-responsive-nav-link> 
+            <form method="POST" action="{{ route('logout') }}" style="">
+              @csrf
+              <x-responsive-nav-link href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">{{ __('Cerrar sesion') }}</x-responsive-nav-link>
+            </form>
+          </div>
+        </div>
       </div>
       <div style="height: auto;"><iframe name="contenido" src="{{ route('riesgos.index') }}" height="700px" width="100%" style="border-style: none;"></iframe>
       </div>

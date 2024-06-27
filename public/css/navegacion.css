@@ -14,6 +14,7 @@
   
   
   .barnav {
+      display: flex;
       padding: 10px;
       overflow: hidden;
       background-color: #073763;
@@ -31,16 +32,17 @@
   }
 
   .barnav img.logo {
-    width: 120%;
-    max-width: 120%;
-}    
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
   
   .dropdown {
       float: left;
       overflow: hidden;
   }
       
-      /* Botón del desplegable */
+
   .dropdown .dropbtn {
       font-size: 16px;
       border: none;
@@ -64,7 +66,8 @@
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
-      border: 0.5px solid #DFE0DD
+      border: 0.5px solid #DFE0DD;
+      
   }
       
   .dropdown-content a {
@@ -83,4 +86,10 @@
   .dropdown:hover .dropdown-content {
       display: block;
   }
-      
+    .profile-dropdown {
+        margin-left: auto;
+    }
+    .profile-dropdown .dropdown-content {
+        left: auto;
+        right: 0;
+    }
