@@ -41,6 +41,10 @@
             <a href="{{ route('equipamientos.index') }}" target="contenido">Equipamientos</a>
           </div>
         </div>
+        <div style="margin-left: 85%">
+        <x-responsive-nav-link :href="route('profile.edit')">
+                    {{ __('Perfil') }}
+                </x-responsive-nav-link>  
         <form method="POST" action="{{ route('logout') }}" style="">
                     @csrf
 
@@ -49,7 +53,8 @@
                                         this.closest('form').submit();">
                         {{ __('Cerrar sesion') }}
                     </x-responsive-nav-link>
-                </form>
+                </form></div>
+          <div></div>
       </div>
       <div style="height: auto;"><iframe name="contenido" src="{{ route('riesgos.index') }}" height="700px" width="100%" style="border-style: none;"></iframe>
       </div>
