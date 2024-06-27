@@ -34,12 +34,13 @@ Route::prefix('Equipamientos')->group(function () {
     Route::get('/', [EquipamientosController::class, 'index'])->name('equipamientos.index');
 });
 
-Route::resource('riesgos', RiesgosController::class); // Usa el controlador correcto
-// Elimina rutas duplicadas o incorrectas
-
-
-
+Route::resource('riesgos', RiesgosController::class);
 Route::get('/riegos', [RiesgosController::class, 'index'])->name('riegos.index');
+Route::get('/riegos/create', [RiesgosController::class, 'create'])->name('riegos.create');
+Route::post('/riegos', [RiesgosController::class, 'store'])->name('riegos.store');
+Route::get('/riegos/{id}/edit', [RiesgosController::class, 'edit'])->name('riegos.edit');
+Route::get('/riesgos/configuracion', [RiesgosController::class, 'configuracion'])->name('riesgos.configuracion');
+
 
 Route::get('/indicadores', [IndicadoresController::class, 'index'])->name('indicadores.index');
 Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->name('indicadores.create');
@@ -51,5 +52,5 @@ Route::resource('indicadores', IndicadoresController::class);
 
 Route::get('/tratamientos/planes-tratamiento', [TratamientosController::class, 'planesTratamiento'])->name('tratamientos.planes-tratamiento');
 Route::get('/tratamientos/seguimiento', [TratamientosController::class, 'seguimiento'])->name('tratamientos.seguimiento');
-Route::get('/riesgos/configuracion', [RiesgosController::class, 'configuracion'])->name('riesgos.configuracion');
+
 require __DIR__.'/auth.php';

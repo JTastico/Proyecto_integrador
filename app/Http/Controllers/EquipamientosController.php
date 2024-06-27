@@ -8,9 +8,8 @@ class EquipamientosController extends Controller
 {
     public function index()
     {
-        $equipments = Equipamiento::all();
 
-        return view('equipamientos.index', ['equipments' => $equipments]);
+        return view('equipamientos.index');
     }
 
     public function create()
