@@ -19,9 +19,18 @@ class EquipamientosController extends Controller
 
     public function store(Request $request)
     {
-        $equipment = Equipamiento::create($request->all());
-
-        return redirect()->route('equipamientos.show', $equipment->id);
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+        // Save the data to the database
+        $equipment = new Equipment();
+        $equipment->name = $validatedData['name'];
+        $equipment->description = $validatedData['description'];
+        $equipment->save();
+        // Redirect to the index page after successful submission
+        
+        return redirect()->route('equipamientos.index')->with('success', 'Equipment added successfully.');
     }
 
     public function show($id)

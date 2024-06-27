@@ -31,7 +31,9 @@ Route::prefix('Organizacion')->group(function () {
 });
 
 Route::prefix('Equipamientos')->group(function () {
-    Route::get('/', [EquipamientosController::class, 'index'])->name('equipamientos.index');
+    Route::get('/index', [EquipamientosController::class, 'index'])->name('equipamientos.index');
+    Route::get('/store', [EquipamientosController::class, 'store'])->name('equipamientos.store');
+    Route::get('/create', [EquipamientosController::class, 'create'])->name('equipamientos.create');
 });
 
 Route::resource('riesgos', RiesgosController::class);

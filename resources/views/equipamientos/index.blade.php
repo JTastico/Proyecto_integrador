@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Registrar EPPs de Sede</h1>
-    <form action="{{ route('equipamientos.store') }}" method="POST">
+    <form action="{{ route('equipamientos.index') }}" method="POST">
         @csrf
         <label for="name">Nombre de la Sede:</label>
         <input type="text" name="sede_name" required>
@@ -19,4 +19,4 @@
         <input type="submit" value="Registrar">
     </form>
 </body>
-</html> 
+</html>

@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Equipamiento extends Model
 {
-    use HasFactory;
+    protected $fillable = ['name', 'description'];
 }
