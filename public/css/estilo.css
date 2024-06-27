@@ -248,6 +248,11 @@ select {
   margin: auto;
 }
 
+.salto {
+  position: relative;
+  clear: left;
+}
+
 /* Tablas */
 .tablaPrincipal {
   background-color: #fff;
@@ -309,10 +314,6 @@ td {
 }
 
 /* Botones */
-.salto {
-  position: relative;
-  clear: left;
-}
 
 .botonSinEstilo {
   border: none;
@@ -414,7 +415,7 @@ form {
 }
 
 form > input[type="text"] {
-  width: 100%;
+  width: 95%;
   height: 30px;
   margin: 10.5px 0 20px 0;
   border: 1.5px solid #989797;
