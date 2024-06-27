@@ -29,9 +29,8 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
+            <a href="{{ route('indicadores.index') }}" target="contenido">Ver Indicadores</a>
             <a href="{{ route('indicadores.create') }}" target="contenido">Nuevo Indicadores</a>
-            <a href="{{ route('indicadores.index') }}" target="contenido">Filtro Indicador</a>
-            <a href="{{ route('indicadores.index') }}" target="contenido">Mediciones Pendientes</a>
           </div>
         </div>  
         <div class="dropdown">
@@ -42,6 +41,11 @@
             <a href="{{ route('equipamientos.index') }}" target="contenido">Equipamientos</a>
           </div>
         </div>
+        <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
       </div>
       <div style="height: auto;"><iframe name="contenido" src="{{ route('riesgos.index') }}" height="700px" width="100%" style="border-style: none;"></iframe>
       </div>

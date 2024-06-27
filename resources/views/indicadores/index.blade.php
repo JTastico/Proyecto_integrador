@@ -26,7 +26,7 @@
 
     <!-- Botones de opciones -->
     <div style="width: 100%; margin: 15px 0px;">
-      <button class="botonAzul" onclick="location.href='{{ route('indicadores.create') }}'">Nuevo Indicador</button>
+      <button class="botonAzul"><a href="{{ route('indicadores.create') }}">Nuevo Indicador</a></button>
       <button class="buttonAzul">Historial de Indicadores</button>
       <button class="botonAzul">Medición de Indicadores</button>
     </div>
@@ -106,26 +106,26 @@
     </div>
 
     <!-- Tabla de indicadores -->
-    <div class="contenedorSegundario">
+    <div class="contenedorSegundario" style="width: 100%;">
       <table class="tablaPrincipal">
         <thead>
           <tr style="background-color: #0C343D; color: #EDEDED;">
-            <th>Desactivar</th>
-            <th>Editar</th>
-            <th>Indicador</th>
-            <th>Proceso/s</th>
-            <th>Normas</th>
-            <th>Tipo Indicador</th>
-            <th>Valores</th>
-            <th>Frecuencia de Medición</th>
-            <th>Inicio</th>
-            <th>Fin</th>
+            <th style="width: 5%">Desactivar</th>
+            <th style="width: 5%">Editar</th>
+            <th style="width: 15%">Indicador</th>
+            <th style="width: 15%">Proceso/s</th>
+            <th style="width: 10%">Normas</th>
+            <th style="width: 10%">Tipo Indicador</th>
+            <th style="width: 10%">Valores</th>
+            <th style="width: 10%">Frecuencia de Medición</th>
+            <th style="width: 5%">Inicio</th>
+            <th style="width: 5%">Fin</th>
           </tr>
         </thead>
         <tbody>
           <tr style="background-color: #EDEDED;">
-            <td><i class='bx bxs-minus-square bx-md' style='color:#0b5394'></i></td>
-            <td><i class='bx bx-edit bx-md' style='color:#0b5394'></i></td>
+            <td><a href="{{ route('indicadores.index') }}"><i class='bx bxs-minus-square bx-md' style='color:#0b5394'></i></a></td>
+            <td><a href="{{ route('indicadores.index') }}"><i class='bx bx-edit bx-md' style='color:#0b5394'></i></a></td>
             <td>#NombreIndicador</td>
             <td>#Procesos</td>
             <td>#Normas</td>
