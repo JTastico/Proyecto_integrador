@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="../../css/estilo.css">
+  <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
 </head>
 
 <body>
@@ -27,22 +27,15 @@
         Volver a indicadores
       </a>
     </button>
-
-    <!-- Menú horizontal -->
-    <div class="menu-horizontal">
-      <p>Datos Indicador</p>
-      <p>Procesos</p>
-    </div>
-
+    <div class="salto"></div>
     <!-- Formulario -->
+    <div class="contenedorTercero" style="padding: 5px; margin-top: 15px; width: 100%">
     <form action="{{ route('indicadores.store') }}" method="POST">
       @csrf
-      <!-- Sección: Datos del Indicador -->
-      <div class="contenido">
-        <p class="titulo">Paso 1/2. Datos del Indicador</p>
-        
         <!-- Denominación del Indicador -->
+        <br>
         <label for="denominacion" class="etiqueta">Denominación del Indicador (*)</label>
+        <br>
         <input type="text" name="denominacion" id="denominacion" required>
 
         <!-- Cargar datos de indicadores -->
@@ -77,7 +70,8 @@
 
         <!-- Norma/s -->
         <label for="normas" class="etiqueta">Norma/s (*)</label>
-        <div class="contenedorSinEstilo">
+        <br>
+        <div class="contendorEnContenedor" style="margin-top: 15px">
           <ol>
             <li><input type="radio" name="normas" value="si_no"> SI / NO</li>
             <li><input type="radio" name="normas" value="texto"> Texto</li>
@@ -86,14 +80,17 @@
           <div class="contenedorEnContenedor">
             <label for="resultado_min">Resultado Mínimo esperable (*)</label>
             <input type="text" name="resultado_min" id="resultado_min" required>
+            <br>
             <label for="resultado_max">Resultado Máximo esperable (*)</label>
             <input type="text" name="resultado_max" id="resultado_max" required>
+            <br>
             <label for="unidad_valor">Nombre Unidad de Valor (*)</label>
             <input type="text" name="unidad_valor" id="unidad_valor" required>
           </div>
         </div>
 
         <!-- Frecuencia de Medición -->
+        <div class="salto"></div>
         <label for="frecuencia" class="etiqueta">Frecuencia de Medición</label>
         <select name="frecuencia" id="frecuencia">
           <option value="">Selecciona</option>
@@ -111,28 +108,30 @@
 
         <!-- Fechas de inicio y fin de medición -->
         <label for="fecha_inicio" class="etiqueta">Fecha de Inicio de Medición (*)</label>
-        <input type="date" name="fecha_inicio" id="fecha_inicio" required>
-
+        <br>
+        <input type="date" name="fecha_inicio" id="fecha_inicio" required style="margin-top: 15px;">
+        <br><br>
         <label for="fecha_fin" class="etiqueta">Fecha Fin de Medición (*)</label>
-        <input type="date" name="fecha_fin" id="fecha_fin" required>
-
+        <br>
+        <input type="date" name="fecha_fin" id="fecha_fin" required style="margin-top: 15px;">
+        <br><br>
         <!-- Responsables de seguimiento y medición -->
         <label class="etiqueta">Responsable Seguimiento del Indicador (*)</label>
-        <ol>
+        <ol  style="margin-top: 15px;">
           <li><input type="radio" name="responsable_seguimiento" value="usuario"> Usuario</li>
           <li><input type="radio" name="responsable_seguimiento" value="puesto"> Puesto</li>
         </ol>
-
+        <br>
         <label class="etiqueta">Responsable Medición / Registro de Datos del Indicador (*)</label>
-        <ol>
+        <ol style="margin-top: 15px;">
           <li><input type="radio" name="responsable_medicion" value="usuario"> Usuario</li>
           <li><input type="radio" name="responsable_medicion" value="puesto"> Puesto</li>
         </ol>
-
+        <br>
         <!-- Resultados visibles para -->
         <label class="etiqueta">Resultados Visibles para:</label>
         <div class="grid">
-          <ol>
+          <ol style="margin-top: 15px;">
             <li><input type="checkbox" name="resultados_visibles[]" value="aseguramiento_calidad"> Jefe de Aseguramiento de la Calidad</li>
             <li><input type="checkbox" name="resultados_visibles[]" value="recursos_humanos"> Jefe de Recursos Humanos</li>
             <li><input type="checkbox" name="resultados_visibles[]" value="gerente_general"> Gerente General</li>
@@ -143,4 +142,12 @@
             <li><input type="checkbox" name="resultados_visibles[]" value="jefe_ventas"> Jefe de Ventas</li>
             <li><input type="checkbox" name="resultados_visibles[]" value="jefe_produccion"> Jefe de Producción</li>
             <li><input type="checkbox" name="resultados_visibles[]" value="jefe_control_calidad"> Jefe de Control de Calidad</li>
-            <li><input type="checkbox" name
+          </ol>
+        </div>
+        <br>
+        <button class="botonAzul" style="margin: auto;font-size: large; border-radius: 5px">Crear indicador</button>
+      </form>
+    <div>
+  <body>
+    
+  </body>
