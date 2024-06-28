@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../../../css/estilo.css">
   <style>
     body {
-      /* background-image: url('../../../public/img/fondoProfile.jpg'); */
       background-color: #073763;
     }
   </style>
@@ -21,7 +20,7 @@
         <div style="margin-left: auto;"><p class="subTitulo">holas</p></div>
     </div>
     <div class="contenedorMargen">
-      <div class="contenedorPrincipal" style="padding: 5px;">
+      <div class="contenedorPrincipal" style="padding: 5px; border-radius: 10px">
         <div class=""><h2 class="subTitulo">
         Hola, {{ Auth::user()->name }}
         </h2></div>
@@ -29,10 +28,10 @@
         @include('profile.partials.update-profile-information-form')
         </div>
         
-        <div class="contenedorEnContenedor"style="background-color: #073763; color: white; border-radius: 5px">
+        <div class="contenedorEnContenedor" style="background-color: #073763; color: white; border-radius: 5px">
         @include('profile.partials.update-password-form')
         </div>
-        <div class="contenedorEnContenedor"style="background-color: #073763; color: white; border-radius: 5px">
+        <div class="contenedorEnContenedor" style="background-color: #073763; color: white; border-radius: 5px">
           @include('profile.partials.delete-user-form')
         </div>
 

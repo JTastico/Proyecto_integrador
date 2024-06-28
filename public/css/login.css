@@ -1,17 +1,17 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #073763;
-    font-family: Arial, sans-serif;
-    background-image: url('../img/fondoLogin.jpg');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #073763;
+  font-family: Arial, sans-serif;
+  background-image: url('../img/fondoLogin.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
   .wrapper {
     background-color: rgba(255, 255, 255, 0.8);
@@ -88,3 +88,11 @@ body {
   .btn:hover {
     background-color: #0a4e8e;
   }
+  .contenedorDegradado {
+    background: linear-gradient(to right, #0000FF, #87CEFA);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
