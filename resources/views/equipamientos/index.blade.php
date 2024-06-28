@@ -4,6 +4,7 @@
     <title>Registrar EPPs de Sede</title>
 </head>
 <body>
+    <link rel="stylesheet" href="css/equipamientos.css">
     <h1>Registrar EPPs de Sede</h1>
     <form action="{{ route('equipamientos.index') }}" method="POST">
         @csrf

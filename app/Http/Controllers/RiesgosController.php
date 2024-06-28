@@ -53,9 +53,44 @@ class RiesgosController extends Controller
      */
     public function show(Riesgo $riesgo)
     {
-        return view('riesgos.show', compact('riesgo'));
+        return view('riesgos.show', compact('riesgos'));
+    }
+    public function filtrar(Request $request)
+    {
+        // Filtra los riesgos según los parámetros recibidos
+        $estado = $request->input('estado');
+        $empresa = $request->input('empresa');
+        $norma = $request->input('norma');
+
+        $riesgos = Riesgo::where('estado', $estado)
+                        ->where('empresa', $empresa)
+                        ->where('norma', $norma)
+                        ->get();
+
+        return view('riesgos.show', compact('riesgos'));
     }
 
+    public function guardar(Request $request)
+    {
+        // Guarda un nuevo riesgo en la base de datos
+        $riesgo = new Riesgo;
+        $riesgo->denominacion = $request->input('denominacion');
+        $riesgo->estado = $request->input('estado');
+        $riesgo->fecha = $request->input('fecha');
+        $riesgo->organizacion = $request->input('organizacion');
+        $riesgo->sede = $request->input('sede');
+        $riesgo->norma = $request->input('norma');
+        $riesgo->save();
+
+        return redirect('/riesgos');
+    }
+    public function eliminar($id)
+    {
+        $riesgo = Riesgo::find($id);
+        $riesgo->delete();
+
+        return redirect('/riesgos');
+    }
     /**
      * Show the form for editing the specified resource.
      *

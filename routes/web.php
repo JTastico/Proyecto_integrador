@@ -42,7 +42,9 @@ Route::get('/riegos/create', [RiesgosController::class, 'create'])->name('riegos
 Route::post('/riegos', [RiesgosController::class, 'store'])->name('riegos.store');
 Route::get('/riegos/{id}/edit', [RiesgosController::class, 'edit'])->name('riegos.edit');
 Route::get('/riesgos/configuracion', [RiesgosController::class, 'configuracion'])->name('riesgos.configuracion');
-
+Route::post('/riesgos/filtrar', [RiesgoController::class, 'filtrar']);
+Route::post('/riesgos/guardar', [RiesgoController::class, 'guardar']);
+Route::delete('/riesgos/eliminar/{id}', [RiesgoController::class, 'eliminar']);
 
 Route::get('/indicadores', [IndicadoresController::class, 'index'])->name('indicadores.index');
 Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->name('indicadores.create');
@@ -54,5 +56,7 @@ Route::resource('indicadores', IndicadoresController::class);
 
 Route::get('/tratamientos/planes-tratamiento', [TratamientosController::class, 'planesTratamiento'])->name('tratamientos.planes-tratamiento');
 Route::get('/tratamientos/seguimiento', [TratamientosController::class, 'seguimiento'])->name('tratamientos.seguimiento');
+
+
 
 require __DIR__.'/auth.php';

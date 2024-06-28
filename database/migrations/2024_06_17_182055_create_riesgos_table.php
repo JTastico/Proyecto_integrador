@@ -11,10 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Schema::create('riesgos', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name');
+        //     $table->text('description');
+        //     $table->timestamps();
+        // });
         Schema::create('riesgos', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description');
+            $table->string('denominacion');
+            $table->string('estado');
+            $table->date('fecha');
+            $table->string('organizacion');
+            $table->string('sede');
+            $table->string('norma');
             $table->timestamps();
         });
     }

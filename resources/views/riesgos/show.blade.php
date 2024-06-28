@@ -38,7 +38,7 @@
                             <p>Organizacion</p>
                             <select name="empresa" style="width: 100%;">
                                 <option value="">Selecciona</option>
-                                <option value="1938">LABORATORIOS LA COOPER</option>
+                                <option value="1938">LABORATORIOS</option>
                             </select>
                         </div>
                         <div class="contenedorEnContenedor" style="width: 30%;">
