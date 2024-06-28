@@ -49,7 +49,7 @@
           <button class="dropbtn"><i class='bx bxs-user'></i></button>
           <div class="dropdown-content">
             <x-responsive-nav-link :href="route('profile.edit')">{{ __('Perfil') }}</x-responsive-nav-link> 
-            <form method="POST" action="{{ route('logout') }}" style="">
+            <form method="POST" action="{{ route('logout') }}">
               @csrf
               <x-responsive-nav-link href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">{{ __('Cerrar sesion') }}</x-responsive-nav-link>
             </form>
