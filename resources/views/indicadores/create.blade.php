@@ -38,6 +38,7 @@
         <br>
         <input type="text" name="denominacion" id="denominacion" required>
 
+
         <!-- Cargar datos de indicadores -->
         <div>
           <p class="subTitulo">¿Cargar datos de indicadores utilizados anteriormente?</p>
@@ -47,11 +48,13 @@
           <label for="no_cargar">No</label>
         </div>
 
+
         <!-- Selección de indicadores previamente creados -->
         <select name="indicadores_creados" id="indicadores_creados">
           <option value="">Selecciona un indicador</option>
           <!-- Aquí se deben generar las opciones dinámicamente si corresponde -->
         </select>
+
 
         <!-- Organización -->
         <label for="organizacion" class="etiqueta">Organización (*)</label>
@@ -59,6 +62,7 @@
           <option value="">Selecciona</option>
           <option value="La Cooper">LABORATORIOS LA COOPER</option>
         </select>
+
 
         <!-- Sede -->
         <label for="sede" class="etiqueta">Sede (*)</label>
@@ -68,26 +72,6 @@
           <option value="Principal">Sede Principal</option>
         </select>
 
-        <!-- Norma/s -->
-        <label for="normas" class="etiqueta">Norma/s (*)</label>
-        <br>
-        <div class="contendorEnContenedor" style="margin-top: 15px">
-          <ol>
-            <li><input type="radio" name="normas" value="si_no"> SI / NO</li>
-            <li><input type="radio" name="normas" value="texto"> Texto</li>
-            <li><input type="radio" name="normas" value="valor_numerico"> Valor Numérico</li>
-          </ol>
-          <div class="contenedorEnContenedor">
-            <label for="resultado_min">Resultado Mínimo esperable (*)</label>
-            <input type="text" name="resultado_min" id="resultado_min" required>
-            <br>
-            <label for="resultado_max">Resultado Máximo esperable (*)</label>
-            <input type="text" name="resultado_max" id="resultado_max" required>
-            <br>
-            <label for="unidad_valor">Nombre Unidad de Valor (*)</label>
-            <input type="text" name="unidad_valor" id="unidad_valor" required>
-          </div>
-        </div>
 
         <!-- Frecuencia de Medición -->
         <div class="salto"></div>
@@ -106,6 +90,7 @@
           <option value="anual">Anual</option>
         </select>
 
+
         <!-- Fechas de inicio y fin de medición -->
         <label for="fecha_inicio" class="etiqueta">Fecha de Inicio de Medición (*)</label>
         <br>
@@ -115,6 +100,8 @@
         <br>
         <input type="date" name="fecha_fin" id="fecha_fin" required style="margin-top: 15px;">
         <br><br>
+
+
         <!-- Responsables de seguimiento y medición -->
         <label class="etiqueta">Responsable Seguimiento del Indicador (*)</label>
         <ol  style="margin-top: 15px;">

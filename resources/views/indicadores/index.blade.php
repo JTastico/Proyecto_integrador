@@ -110,11 +110,10 @@
       <table class="tablaPrincipal">
         <thead>
           <tr style="background-color: #0C343D; color: #EDEDED;">
-            <th style="width: 5%">Desactivar</th>
+            <th style="width: 5%">Eliminar</th>
             <th style="width: 5%">Editar</th>
             <th style="width: 15%">Indicador</th>
             <th style="width: 15%">Proceso/s</th>
-            <th style="width: 10%">Normas</th>
             <th style="width: 10%">Tipo Indicador</th>
             <th style="width: 10%">Valores</th>
             <th style="width: 10%">Frecuencia de Medición</th>
@@ -128,7 +127,6 @@
             <td><a href="{{ route('indicadores.index') }}"><i class='bx bx-edit bx-md' style='color:#0b5394'></i></a></td>
             <td>#NombreIndicador</td>
             <td>#Procesos</td>
-            <td>#Normas</td>
             <td>#TipoIndicador</td>
             <td>#Valores</td>
             <td>#FrecuenciaMedicion</td>

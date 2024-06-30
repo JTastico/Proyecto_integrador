@@ -22,14 +22,10 @@ class IndicadoresController extends Controller
     {
             $indicador = new Indicador;
             $indicador->denominacion = $request->input('denominacion');
-            $indicador->cargar_datos = $request->input('cargar_datos');
+            $indicador->cargar_datos = $request->input('cargar_datos') == 'no' ? 0 : 1;
             $indicador->indicadores_creados = $request->input('indicadores_creados');
             $indicador->organizacion = $request->input('organizacion');
             $indicador->sede = $request->input('sede');
-            $indicador->normas = $request->input('normas');
-            $indicador->resultado_min = $request->input('resultado_min');
-            $indicador->resultado_max = $request->input('resultado_max');
-            $indicador->unidad_valor = $request->input('unidad_valor');
             $indicador->frecuencia = $request->input('frecuencia');
             $indicador->fecha_inicio = $request->input('fecha_inicio');
             $indicador->fecha_fin = $request->input('fecha_fin');

@@ -20,10 +20,6 @@ class CreateIndicadoresTable extends Migration
             $table->string('indicadores_creados')->nullable();
             $table->string('organizacion');
             $table->string('sede');
-            $table->string('normas');
-            $table->string('resultado_min');
-            $table->string('resultado_max');
-            $table->string('unidad_valor');
             $table->string('frecuencia')->nullable();
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
