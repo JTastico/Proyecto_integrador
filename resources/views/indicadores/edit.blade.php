@@ -19,7 +19,7 @@
   <div class="encabezado"><p class="titulo">Editar Indicador</p></div>
   <!--Cuerpo-->
   <div class="contenedorMargen">
-    <div class="contenedorTercero" style="width: 100%;">
+    <div class="contenido">
       <form action="indicadores/{{$indicador->id}}" method="POST">
         @csrf
         @method('PUT')
@@ -87,8 +87,8 @@
         <div class="salto"></div>
         <button class="botonAzul" onclick="" style="margin: 10px 20px;">Continuar</button>
       </div>
-      </form>
     </div>
+  </form>
 </div>
 </body>
 </html>
