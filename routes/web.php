@@ -49,13 +49,9 @@ Route::delete('/riesgos/eliminar/{id}', [RiesgoController::class, 'eliminar']);
 Route::get('/indicadores', [IndicadoresController::class, 'index'])->name('indicadores.index');
 Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->name('indicadores.create');
 Route::post('/indicadores', [IndicadoresController::class, 'store'])->name('indicadores.store');
-Route::get('/indicadores/{id}/edit', [IndicadoresController::class, 'edit'])->name('indicadores.edit');
-Route::put('/indicadores/{id}', [IndicadoresController::class, 'update'])->name('indicadores.update');
-Route::resource('indicadores', IndicadoresController::class);
+Route::resource('indicadores', IndicadoresController::class)->except(['edit', 'update']);
 
 Route::get('/tratamientos/planes-tratamiento', [TratamientosController::class, 'planesTratamiento'])->name('tratamientos.planes-tratamiento');
 Route::get('/tratamientos/seguimiento', [TratamientosController::class, 'seguimiento'])->name('tratamientos.seguimiento');
-
-
 
 require __DIR__.'/auth.php';
