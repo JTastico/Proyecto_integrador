@@ -8,26 +8,38 @@ class CreateIndicadoresTable extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('indicadores', function (Blueprint $table) {
             $table->id();
-            $table->string('denominacion_indicador');
+            $table->string('denominacion');
+            $table->boolean('cargar_datos')->default(false);
+            $table->string('indicadores_creados')->nullable();
             $table->string('organizacion');
             $table->string('sede');
-            $table->string('frecuencia_medicion');
-            $table->date('fecha_medicion');
+            $table->string('normas');
+            $table->string('resultado_min');
+            $table->string('resultado_max');
+            $table->string('unidad_valor');
+            $table->string('frecuencia')->nullable();
+            $table->date('fecha_inicio');
+            $table->date('fecha_fin');
             $table->string('responsable_seguimiento');
             $table->string('responsable_medicion');
+            $table->json('resultados_visibles')->nullable();
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('indicadores');
     }

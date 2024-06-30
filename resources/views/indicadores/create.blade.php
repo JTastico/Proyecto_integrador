@@ -30,8 +30,8 @@
     <div class="salto"></div>
     <!-- Formulario -->
     <div class="contenedorTercero" style="padding: 5px; margin-top: 15px; width: 100%">
-    <form action="{{ route('indicadores.store') }}" method="POST">
-      @csrf
+<form action="{{ route('indicadores.store') }}" method="post">
+  @csrf
         <!-- Denominación del Indicador -->
         <br>
         <label for="denominacion" class="etiqueta">Denominación del Indicador (*)</label>
@@ -145,7 +145,8 @@
           </ol>
         </div>
         <br>
-        <button class="botonAzul" style="margin: auto;font-size: large; border-radius: 5px">Crear indicador</button>
+        <!-- <button class="botonAzul" style="margin: auto;font-size: large; border-radius: 5px">Crear indicador</button> -->
+        <input type="submit" value="guardar indicador">
       </form>
     <div>
   <body>

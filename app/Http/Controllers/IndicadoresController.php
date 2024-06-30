@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Indicador;
 use Illuminate\Http\Request;
 
 class IndicadoresController extends Controller
 {
     public function index()
     {
-        return view('indicadores.index', [
-            
-        ]);
+        $indicadores = Indicador::all();
+        return view('indicadores.index', compact('indicadores'));
     }
 
     public function create()
@@ -20,29 +20,23 @@ class IndicadoresController extends Controller
 
     public function store(Request $request)
     {
-        $indicador = new Indicador();
-        $indicador->nombre = $request->input('indicador');
-        $indicador->save();
-
-        return redirect()->route('indicadores.index');
-    }
-
-    public function edit($id)
-    {
-        $indicador = Indicador::find($id);
-
-        return view('indicadores.edit', [
-            'indicador' => $indicador,
-        ]);
-    }
-
-    public function update(Request $request, $id)
-    {
-        $indicador = Indicador::find($id);
-        $indicador->nombre = $request->input('indicador');
-        $indicador->save();
-
-        return redirect()->route('indicadores.index');
+            $indicador = new Indicador;
+            $indicador->denominacion = $request->input('denominacion');
+            $indicador->cargar_datos = $request->input('cargar_datos');
+            $indicador->indicadores_creados = $request->input('indicadores_creados');
+            $indicador->organizacion = $request->input('organizacion');
+            $indicador->sede = $request->input('sede');
+            $indicador->normas = $request->input('normas');
+            $indicador->resultado_min = $request->input('resultado_min');
+            $indicador->resultado_max = $request->input('resultado_max');
+            $indicador->unidad_valor = $request->input('unidad_valor');
+            $indicador->frecuencia = $request->input('frecuencia');
+            $indicador->fecha_inicio = $request->input('fecha_inicio');
+            $indicador->fecha_fin = $request->input('fecha_fin');
+            $indicador->responsable_seguimiento = $request->input('responsable_seguimiento');
+            $indicador->responsable_medicion = $request->input('responsable_medicion');
+            $indicador->resultados_visibles = $request->input('resultados_visibles');
+            $indicador->save();
+            return redirect()->route('indicadores.index')->with('success', 'Indicador creado exitosamente.');
     }
 }
-

@@ -53,7 +53,6 @@ Route::get('/indicadores/{id}/edit', [IndicadoresController::class, 'edit'])->na
 Route::put('/indicadores/{id}', [IndicadoresController::class, 'update'])->name('indicadores.update');
 Route::resource('indicadores', IndicadoresController::class);
 
-
 Route::get('/tratamientos/planes-tratamiento', [TratamientosController::class, 'planesTratamiento'])->name('tratamientos.planes-tratamiento');
 Route::get('/tratamientos/seguimiento', [TratamientosController::class, 'seguimiento'])->name('tratamientos.seguimiento');
 
