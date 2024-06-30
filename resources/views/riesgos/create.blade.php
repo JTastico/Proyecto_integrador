@@ -34,9 +34,9 @@
         <p>Sedes</p>
         <p>Procesos</p>
         <p>Cuestionarios</p>
-      </div>
+       </div>
       
-      <!-- Paso 1 -->
+       <!-- Paso 1 -->
       <form action="">
         <p class="titulo">Paso 1. Configuración Inicial</p>
         <label for="denominacion" class="etiqueta">
@@ -78,11 +78,8 @@
           <option value="Empresa">5 dimensiones (obligatorio para ENS)</option>
         </select>
         <br>
-        <button class="botonAzul" onclick="" style="margin: 10px 20px; width: 100px;">Continuar</button>
-      </form>
-      
-      <!-- Paso 2 -->
-      <form action="">
+
+        <!-- Paso 2 -->
         <p class="titulo">Paso 2. Selección de Normas / Objetivos intervinientes en la Evaluación de Riesgos</p>
         <label for="denominacion" class="etiqueta">
           Criterio para la evaluación de la eficacia de los controles
@@ -162,12 +159,8 @@
             Ley 29783
           </li>
         </ol>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Continuar</button>
-      </form>
       
-      <!-- Paso 3 -->
-      <form action="">
+       <!-- Paso 3 -->
         <p class="titulo">Paso 3. Configuración de Sedes que intervienen en la Evaluación de Riesgos</p>
         <label for="denominacion" class="etiqueta">
           Sede/s que interviene/n en la Evaluación de Riesgos (*)
@@ -175,12 +168,7 @@
         <p style="margin: 20px 0px 0px 0px ;">Organización: LABORATORIOS LA COOPER</p>
         <input style="margin:  0px 0px 20px" type="checkbox" name="" id="">
         ISO 9001<br>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Continuar</button>
-      </form>
-      
-      <!-- Paso 4 -->
-      <form action="">
+       <!-- Paso 4 -->
         <p class="titulo">Paso 4. Selección de Procesos que intervienen en la Evaluación de Riesgos</p>
         <label for="denominacion" class="etiqueta">
           Selecciona los Procesos que Intervienen en la Evaluación (*)
@@ -204,12 +192,7 @@
             Logística
           </li>
         </ol>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Continuar</button>
-      </form>
-      
-      <!-- Paso 5 -->
-      <form action="">
+       <!-- Paso 5 -->
         <p class="titulo">Paso 5. Configuración de Cuestionarios de Evaluación</p>
         <label for="denominacion" class="etiqueta">
           Introducción de las preguntas del cuestionario

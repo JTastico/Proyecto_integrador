@@ -107,16 +107,32 @@
 
         <!-- Responsables de seguimiento y medición -->
         <label class="etiqueta">Responsable Seguimiento del Indicador (*)</label>
-        <ol  style="margin-top: 15px;">
-          <li><input type="radio" name="responsable_seguimiento" value="usuario"> Usuario</li>
-          <li><input type="radio" name="responsable_seguimiento" value="puesto"> Puesto</li>
-        </ol>
+        <div><select name="" id="">
+          <option value="">Gerente General</option>
+          <option value="">Jefe de Aseguramiento de la Calidad</option>
+          <option value="">Jefe de Recursos Humanos</option>
+          <option value="">Gerente Administrativo</option>
+          <option value="">Jefe de Desarrollo de Negocios y Proyectos</option>
+          <option value="">Jefe de Planificación e Importaciones</option>
+          <option value="">Director Técnico</option>
+          <option value="">Jefe de Ventas</option>
+          <option value="">Jefe de Producción</option>
+          <option value="">Jefe de Control de Calidad</option>
+        </select></div>
         <br>
         <label class="etiqueta">Responsable Medición / Registro de Datos del Indicador (*)</label>
-        <ol style="margin-top: 15px;">
-          <li><input type="radio" name="responsable_medicion" value="usuario"> Usuario</li>
-          <li><input type="radio" name="responsable_medicion" value="puesto"> Puesto</li>
-        </ol>
+        <div><select name="" id="">
+          <option value="">Gerente General</option>
+          <option value="">Jefe de Aseguramiento de la Calidad</option>
+          <option value="">Jefe de Recursos Humanos</option>
+          <option value="">Gerente Administrativo</option>
+          <option value="">Jefe de Desarrollo de Negocios y Proyectos</option>
+          <option value="">Jefe de Planificación e Importaciones</option>
+          <option value="">Director Técnico</option>
+          <option value="">Jefe de Ventas</option>
+          <option value="">Jefe de Producción</option>
+          <option value="">Jefe de Control de Calidad</option>
+        </select></div>
         <br>
         <!-- Resultados visibles para -->
         <label class="etiqueta">Resultados Visibles para:</label>
@@ -136,7 +152,7 @@
         </div>
         <br>
         <!-- <button class="botonAzul" style="margin: auto;font-size: large; border-radius: 5px">Crear indicador</button> -->
-        <input class="boton azul" type="submit" value="guardar indicador">
+        <input class="botonAzul" type="submit" value="guardar indicador">
       </form>
     <div>
   <body>
