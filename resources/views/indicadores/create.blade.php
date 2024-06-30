@@ -136,7 +136,7 @@
         </div>
         <br>
         <!-- <button class="botonAzul" style="margin: auto;font-size: large; border-radius: 5px">Crear indicador</button> -->
-        <input type="submit" value="guardar indicador">
+        <input class="boton azul" type="submit" value="guardar indicador">
       </form>
     <div>
   <body>

@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div style="height: auto;"><iframe name="contenido" src="{{ route('riesgos.index') }}" height="700px" width="100%" style="border-style: none;"></iframe>
+      <div style="height: 100%;"><iframe name="contenido" src="{{ route('riesgos.index') }}" height="700px" width="100%" style="border-style: none;"></iframe>
       </div>
 </body>
 </html>

@@ -46,26 +46,44 @@
           <option value="">Cuatrimestral</option>
           <option value="">Semestral</option>
           <option value="">Anual</option>
-        </select><br>
+          </select><br>
         <label for="denominacion" class="etiqueta">Fecha de Inicio de Medicion(*):</label><br>
+        <br>
         <input type="date" name="fecha_inicio_medicion" id="fecha_inicio_medicion" value="{{$indicador->fecha_inicio_medicion}}" required>
-        <br>
+        <br><br>
         <label for="denominacion" class="etiqueta">Fecha de Fin de Medicion (*):</label><br>
-        <input type="date" name="fecha_fin_medicion" id="fecha_fin_medicion" value="{{$indicador->fecha_fin_medicion}}" required>
         <br>
+        <input type="date" name="fecha_fin_medicion" id="fecha_fin_medicion" value="{{$indicador->fecha_fin_medicion}}" required>
+        <br><br>
         <label for="denominacion" class="etiqueta">Responsable Seguimiento  del Indicador(*):</label><br>
-        <ol style="margin-top: 20px 0px; grid-template-columns: repeat(2, 1fr); grid-template-rows: auto;">
-          <div class="grid" style="margin-top: 20px 0px;">
-            <li><input type="radio" name="ResponsabeSeguimientoIndicadores" id="">SI / NO</li>
-          </div>
-        </ol>
+        <div><select name="" id="">
+          <option value="">Gerente General</option>
+          <option value="">Jefe de Aseguramiento de la Calidad</option>
+          <option value="">Jefe de Recursos Humanos</option>
+          <option value="">Gerente Administrativo</option>
+          <option value="">Jefe de Desarrollo de Negocios y Proyectos</option>
+          <option value="">Jefe de Planificación e Importaciones</option>
+          <option value="">Director Técnico</option>
+          <option value="">Jefe de Ventas</option>
+          <option value="">Jefe de Producción</option>
+          <option value="">Jefe de Control de Calidad</option>
+        </select></div>
+        <br>
         <div class="salto"></div>
         <label for="denominacion" class="etiqueta">Responsable Medicion / Registro de Datos del Indicador(*)</label><br>
-        <ol style="margin-top: 20px 0px; grid-template-columns: repeat(2, 1fr); grid-template-rows: auto;">
-          <div class="grid" style="margin-top: 20px 0px;">
-            <li><input type="radio" name="ResponsableMedicion" id="">SI / NO</li>
-          </div>
-        </ol>
+        <br>
+        <div><select name="" id="">
+          <option value="">Gerente General</option>
+          <option value="">Jefe de Aseguramiento de la Calidad</option>
+          <option value="">Jefe de Recursos Humanos</option>
+          <option value="">Gerente Administrativo</option>
+          <option value="">Jefe de Desarrollo de Negocios y Proyectos</option>
+          <option value="">Jefe de Planificación e Importaciones</option>
+          <option value="">Director Técnico</option>
+          <option value="">Jefe de Ventas</option>
+          <option value="">Jefe de Producción</option>
+          <option value="">Jefe de Control de Calidad</option>
+        </select></div>
         <div class="salto"></div>
         <button class="botonAzul" onclick="" style="margin: 10px 20px;">Continuar</button>
       </div>
