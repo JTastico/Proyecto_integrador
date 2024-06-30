@@ -52,6 +52,9 @@
         <!-- Selección de indicadores previamente creados -->
         <select name="indicadores_creados" id="indicadores_creados">
           <option value="">Selecciona un indicador</option>
+          @foreach($indicadores as $indicador)
+            <option value="{{ $indicador->id }}">{{ $indicador->denominacion }}</option>
+          @endforeach
           <!-- Aquí se deben generar las opciones dinámicamente si corresponde -->
         </select>
 

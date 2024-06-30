@@ -18,7 +18,7 @@
 
   <!-- Encabezado -->
   <div class="encabezado">
-    <p class="titulo" style="margin: 0px 15px; font-size: xxx-large;">Indicadores</p>
+    <p class="titulo" style="margin: 0px 15px; font-size: xxx-large;">indicadores</p>
   </div>
 
   <!-- Contenedor principal -->
@@ -26,9 +26,8 @@
 
     <!-- Botones de opciones -->
     <div style="width: 100%; margin: 15px 0px;">
-      <button class="botonAzul"><a href="{{ route('indicadores.create') }}">Nuevo Indicador</a></button>
-      <button class="buttonAzul">Historial de Indicadores</button>
-      <button class="botonAzul">Medición de Indicadores</button>
+      <button class="botonAzul"><a href="{{ route('indicadores.create') }}">Nuevo indicadores</a></button>
+      <button class="botonAzul">Medición de indicadores</button>
     </div>
 
     <!-- Formulario de filtrado -->
@@ -38,13 +37,13 @@
         <p class="subTitulo">Opciones de Filtrado</p>
 
         <div class="contenedorEnContenedor">
-          <p>Indicador</p>
+          <p>indicadores</p>
           <input class="input-box" type="text" style="width: 100%;">
         </div>
 
         <div class="contenedorEnContenedor">
-          <p>Tipo de Indicador</p>
-          <select name="TipoIndicador" style="width: 100%;">
+          <p>Tipo de indicadores</p>
+          <select name="Tipoindicadores" style="width: 100%;">
             <option value="">Selecciona</option>
             <option value="Si/No">Si / No</option>
             <option value="Texto">Texto</option>
@@ -112,9 +111,9 @@
           <tr style="background-color: #0C343D; color: #EDEDED;">
             <th style="width: 5%">Eliminar</th>
             <th style="width: 5%">Editar</th>
-            <th style="width: 15%">Indicador</th>
+            <th style="width: 15%">indicadores</th>
             <th style="width: 15%">Proceso/s</th>
-            <th style="width: 10%">Tipo Indicador</th>
+            <th style="width: 10%">Tipo indicadores</th>
             <th style="width: 10%">Valores</th>
             <th style="width: 10%">Frecuencia de Medición</th>
             <th style="width: 5%">Inicio</th>
@@ -122,17 +121,28 @@
           </tr>
         </thead>
         <tbody>
+        @foreach($indicadores as $indicadores)
           <tr style="background-color: #EDEDED;">
-            <td><a href="{{ route('indicadores.index') }}"><i class='bx bxs-minus-square bx-md' style='color:#0b5394'></i></a></td>
-            <td><a href="{{ route('indicadores.index') }}"><i class='bx bx-edit bx-md' style='color:#0b5394'></i></a></td>
-            <td>#NombreIndicador</td>
-            <td>#Procesos</td>
-            <td>#TipoIndicador</td>
-            <td>#Valores</td>
-            <td>#FrecuenciaMedicion</td>
-            <td>#Inicio</td>
-            <td>#Fin</td>
+            <!-- Eliminar un indicadores -->
+            <td><a href="{{ route('indicadores.destroy', $indicadores->id) }}" onclick="event.preventDefault();
+            document.getElementById('delete-form-{{ $indicadores->id }}').submit();"><i 
+            class='bx bxs-minus-square bx-md' style='color:#0b5394'></i></a></td>
+
+            <!-- Editar un indicadores -->
+            <td><a href="{{ route('indicadores.edit', $indicadores->id) }}"><i class='bx bx-edit bx-md' style='color:#0b5394'></i></a></td>
+            <td>{{ $indicadores->denominacion }}</td>
+            <td>{{ $indicadores->proceso }}</td>
+            <td>{{ $indicadores->tipo_indicadores }}</td>
+            <td>{{ $indicadores->valores }}</td>
+            <td>{{ $indicadores->frecuencia }}</td>
+            <td>{{ $indicadores->fecha_inicio }}</td>
+            <td>{{ $indicadores->fecha_fin }}</td>
           </tr>
+          <form id="delete-form-{{ $indicadores->id }}" action="{{ route('indicadores.destroy', $indicadores->id) }}" method="POST" style="display: none;">
+            @csrf
+            @method('DELETE')
+          </form>
+        @endforeach
           <!-- Aquí puedes agregar más filas según necesites -->
         </tbody>
       </table>

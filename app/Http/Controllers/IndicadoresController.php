@@ -15,7 +15,8 @@ class IndicadoresController extends Controller
 
     public function create()
     {
-        return view('indicadores.create');
+        $indicadores = Indicador::all();
+        return view('indicadores.create', compact('indicadores'));
     }
 
     public function store(Request $request)
@@ -34,5 +35,18 @@ class IndicadoresController extends Controller
             $indicador->resultados_visibles = $request->input('resultados_visibles');
             $indicador->save();
             return redirect()->route('indicadores.index')->with('success', 'Indicador creado exitosamente.');
+    }
+
+    public function show($id)
+    {
+        $indicador = Indicador::find($id);
+        return view('indicadores.show', ['indicador' => $indicador]);
+    }
+
+    public function edit($id)
+    {
+        $indicador = Indicador::find($id);
+        return view('indicadores.edit', ['indicador' => $indicador]);
+
     }
 }
