@@ -16,15 +16,16 @@
 </head>
 <body>
     <div class="encabezado" style="display: flex;">
+
         <p class="titulo">Perfil del Usuario</p>
-        <div style="margin-left: auto;"><p class="subTitulo">holas</p></div>
+        <div style="margin-left: auto; margin-top: 20px; margin-right: 10px"><a href="{{ route('dashboard') }}" class="icono"><i class='bx bxs-home-alt-2 bx-lg'></i></a></div>
     </div>
     <div class="contenedorMargen">
       <div class="contenedorPrincipal" style="padding: 5px; border-radius: 10px">
         <div class=""><h2 class="subTitulo">
         Hola, {{ Auth::user()->name }}
         </h2></div>
-        <div class="contenedorEnContenedor" style="background-color: #073763; color: white; border-radius: 5px">
+        <div class="contenedorEnContenedor" style="background-color: #073763; color: white; border-radius: 5px; font-size: 25px">
         @include('profile.partials.update-profile-information-form')
         </div>
         
