@@ -17,7 +17,7 @@
 <body>
     <div class="encabezado" style="display: flex;">
         <p class="titulo">Perfil del Usuario</p>
-        <div style="margin-left: auto;"><p class="subTitulo">holas</p></div>
+        <div style="margin-left: auto; margin-top: 25px; margin-right: 15px"><a href="{{ route('dashboard') }}" class="icono"><i class='bx bxs-home bx-md'></i></a></div>
     </div>
     <div class="contenedorMargen">
       <div class="contenedorPrincipal" style="padding: 5px; border-radius: 10px">

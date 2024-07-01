@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrganizacionController;
-use App\Http\Controllers\RiesgosController; // Asegúrate de que sea el controlador correcto
+use App\Http\Controllers\RiesgosController;
 use App\Http\Controllers\EquipamientosController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
