@@ -17,7 +17,7 @@
   <!-- Encabezado -->
   <header class="header">
     <div class="logo">
-      <p class="titulo">AIDRA</p>
+      <p class="titulo">SAE</p>
     </div>
     <nav class="nav">
       <a href="#">Inicio</a>
