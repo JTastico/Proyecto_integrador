@@ -1,134 +1,83 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use App\Models\Riesgo;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use App\Models\Riesgo;
 
 class RiesgosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function index(Request $request)
     {
-        $riesgos = Riesgo::all();
+        $query = Riesgo::query();
+
+        if ($request->filled('estado')) {
+            $query->where('estado', $request->estado);
+        }
+
+        if ($request->filled('empresa')) {
+            $query->where('empresa', $request->empresa);
+        }
+
+        if ($request->filled('norma')) {
+            $query->where('norma', $request->norma);
+        }
+
+        $riesgos = $query->get();
+
         return view('riesgos.index', compact('riesgos'));
     }
+    
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('riesgos.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required',
-            // otros campos de validación
+            'denominacion' => 'required|string|max:255',
+            'organizacion' => 'required|string|max:255',
+            'dimensiones_seguridad' => 'required|string|max:255',
+            'criterio_evaluacion' => 'required|string|max:255',
+            'normas_objetivos' => 'required|array',
+            'sedes' => 'required|array',
+            'procesos' => 'required|array',
+            'cuestionario' => 'required|string',
         ]);
 
-        Riesgo::create($request->all());
-        return redirect()->route('riesgos.index');
+        $riesgo = Riesgo::create([
+            'denominacion' => $request->denominacion,
+            'organizacion' => $request->organizacion,
+            'dimensiones_seguridad' => $request->dimensiones_seguridad,
+            'criterio_evaluacion' => $request->criterio_evaluacion,
+            'normas_objetivos' => $request->normas_objetivos,
+            'sedes' => $request->sedes,
+            'procesos' => $request->procesos,
+            'cuestionario' => $request->cuestionario,
+        ]);
+
+        return redirect()->route('riesgos.index')->with('success', 'Riesgo creado exitosamente.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Riesgo  $riesgo
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function show(Riesgo $riesgo)
     {
-        return view('riesgos.show', compact('riesgos'));
-    }
-    public function filtrar(Request $request)
-    {
-        // Filtra los riesgos según los parámetros recibidos
-        $estado = $request->input('estado');
-        $empresa = $request->input('empresa');
-        $norma = $request->input('norma');
-
-        $riesgos = Riesgo::where('estado', $estado)
-                        ->where('empresa', $empresa)
-                        ->where('norma', $norma)
-                        ->get();
-
-        return view('riesgos.show', compact('riesgos'));
+        return view('riesgos.show', compact('riesgo'));
     }
 
-    public function guardar(Request $request)
-    {
-        // Guarda un nuevo riesgo en la base de datos
-        $riesgo = new Riesgo;
-        $riesgo->denominacion = $request->input('denominacion');
-        $riesgo->estado = $request->input('estado');
-        $riesgo->fecha = $request->input('fecha');
-        $riesgo->organizacion = $request->input('organizacion');
-        $riesgo->sede = $request->input('sede');
-        $riesgo->norma = $request->input('norma');
-        $riesgo->save();
 
-        return redirect('/riesgos');
-    }
-    public function eliminar($id)
+    public function destroy($id)
     {
         $riesgo = Riesgo::find($id);
         $riesgo->delete();
-
-        return redirect('/riesgos');
-    }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Riesgo  $riesgo
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Riesgo $riesgo)
-    {
-        return view('riesgos.edit', compact('riesgo'));
+        return redirect()->route('riesgos.index')->with('success', 'Riesgo eliminado exitosamente.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Riesgo  $riesgo
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Riesgo $riesgo)
-    {
-        $request->validate([
-            'nombre' => 'required',
-            // otros campos de validación
-        ]);
-
-        $riesgo->update($request->all());
-        return redirect()->route('riesgos.index');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Riesgo  $riesgo
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Riesgo $riesgo)
-    {
-        $riesgo->delete();
-        return redirect()->route('riesgos.index');
-    }
 }

@@ -9,27 +9,23 @@ class IndicadoresController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Indicador::query();
+        $query = Riesgo::query();
 
-        if ($request->filled('denominacion')) {
-            $query->where('denominacion', 'like', '%' . $request->denominacion . '%');
+        if ($request->filled('estado')) {
+            $query->where('estado', $request->estado);
         }
 
-        if ($request->filled('frecuencia')) {
-            $query->where('frecuencia', $request->frecuencia);
+        if ($request->filled('empresa')) {
+            $query->where('empresa', $request->empresa);
         }
 
-        if ($request->filled('fecha_inicio')) {
-            $query->where('fecha_inicio', '>=', $request->fecha_inicio);
+        if ($request->filled('norma')) {
+            $query->where('norma', $request->norma);
         }
 
-        if ($request->filled('fecha_fin')) {
-            $query->where('fecha_fin', '<=', $request->fecha_fin);
-        }
+        $riesgos = $query->get();
 
-        $indicadores = $query->get();
-
-        return view('indicadores.index', compact('indicadores'));
+        return view('riesgos.index', compact('riesgos'));
     }
 
 
@@ -107,9 +103,9 @@ class IndicadoresController extends Controller
     
     public function destroy($id)
     {
-        $indicador = Indicador::find($id);
-        $indicador->delete();
+        $riesgo = Riesgo::findOrFail($id);
+        $riesgo->delete();
 
-        return redirect()->route('indicadores.index');
+        return redirect()->route('riesgos.index')->with('success', 'Riesgo eliminado con éxito');
     }
 }

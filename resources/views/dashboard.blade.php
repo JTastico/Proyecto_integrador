@@ -18,12 +18,8 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="{{ route('riesgos.create') }}" target="contenido">Evaluacion De Riesgos</a>
-            <a href="{{ route('tratamientos.planes-tratamiento') }}" target="contenido">Planes de tratamiento</a>
-            <a href="{{ route('tratamientos.seguimiento') }}" target="contenido">Planes de Seguimiento</a>
-            <a href="{{ route('riesgos.configuracion') }}" target="contenido">Configuracion De Riesgos</a>
-            <a href="Riesgos/mis-riesgos.html" target="contenido">Mis Riesgos</a>
-            <a href="Riesgos/riesgos-propuestos.html" target="contenido">Riesgos Propuestos</a>
+            <a href="{{ route('riesgos.create') }}" target="contenido">Crear Nuevo Riesgos</a>
+            <a href="{{ route('riesgos.index') }}" target="contenido">Mis Riesgos</a>
           </div>
         </div>
         <div class="dropdown">

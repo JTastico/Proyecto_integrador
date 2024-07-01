@@ -37,14 +37,11 @@ Route::prefix('Equipamientos')->group(function () {
 });
 
 Route::resource('riesgos', RiesgosController::class);
-Route::get('/riegos', [RiesgosController::class, 'index'])->name('riegos.index');
+Route::get('/riegos', [RiesgosController::class, 'index'])->name('riesgos.index');
+Route::post('/riesgos', [RiesgosController::class,'store'])->name('riesgos.store');
 Route::get('/riegos/create', [RiesgosController::class, 'create'])->name('riegos.create');
 Route::post('/riegos', [RiesgosController::class, 'store'])->name('riegos.store');
-Route::get('/riegos/{id}/edit', [RiesgosController::class, 'edit'])->name('riegos.edit');
-Route::get('/riesgos/configuracion', [RiesgosController::class, 'configuracion'])->name('riesgos.configuracion');
-Route::post('/riesgos/filtrar', [RiesgoController::class, 'filtrar']);
-Route::post('/riesgos/guardar', [RiesgoController::class, 'guardar']);
-Route::delete('/riesgos/eliminar/{id}', [RiesgoController::class, 'eliminar']);
+Route::delete('/riesgos/eliminar/{id}', [RiesgosController::class, 'destroy'])->name('riesgos.destroy');;
 
 Route::get('/indicadores', [IndicadoresController::class, 'index'])->name('indicadores.index');
 Route::get('/indicadores/create', [IndicadoresController::class, 'create'])->name('indicadores.create');
