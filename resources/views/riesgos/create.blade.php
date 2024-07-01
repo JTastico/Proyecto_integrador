@@ -18,14 +18,14 @@
 
 <body>
   <div class="encabezado">
-    <p class="titulo">Nueva Evaluación de Riesgos</p>
+    <p class="titulo">Nuevo Riesgos</p>
   </div>
   
   <div class="contenedorMargen">
-    <div class="contenido">
+    <div class="contenedorTercero" style="width: 100%">
       <button class="botonAzul">
         <i class='bx bx-rotate-left bx-xs'></i>
-        Volver al Listado de Evaluaciones de Riesgo
+        Volver a Riesgos
       </button>
       <div class="salto"></div>
       <div class="menu-horizontal" style="width: 700px; height: 60px;">
@@ -40,36 +40,19 @@
       <form action="">
         <p class="titulo">Paso 1. Configuración Inicial</p>
         <label for="denominacion" class="etiqueta">
-          Denominación de la Evaluación de Riesgos (*)
+          Denominación del Riesgo (*)
         </label>
         <input class="input-box" type="text" name="" id="">
         
         <label for="denominacion" class="etiqueta">
-          Organización que interviene en la Evaluación de Riesgos (*)
+          Organización que interviene en el Riesgo (*)
         </label>
         <select name="OrgEvaRiesgos" id="">
           <option value="">Seleciona</option>
           <option value="Empresa">LABORATORIOS LA COOPER</option>
         </select><br>
         
-        <label for="denominacion" class="etiqueta">
-          Seleccione el Tipo de Evaluación de Riesgos (*)
-        </label>
-        <ol class="seleccion" style="margin-top: 10px; margin-bottom: 10px;">
-          <li>
-            <input type="radio" name="TipoEvaluacion" id="">
-            Procesos
-          </li>
-          <li>
-            <input type="radio" name="TipoEvaluacion" id="">
-            Áreas / Departamentos
-          </li>
-          <li>
-            <input type="radio" name="TipoEvaluacion" id="">
-            Activos
-          </li>
-        </ol>
-        
+      
         <label for="denominacion" class="etiqueta">
           Dimensiones de Seguridad (*)
         </label>
@@ -78,12 +61,9 @@
           <option value="Empresa">5 dimensiones (obligatorio para ENS)</option>
         </select>
         <br>
-        <button class="botonAzul" onclick="" style="margin: 10px 20px; width: 100px;">Continuar</button>
-      </form>
       
       <!-- Paso 2 -->
-      <form action="">
-        <p class="titulo">Paso 2. Selección de Normas / Objetivos intervinientes en la Evaluación de Riesgos</p>
+        <p class="titulo">Paso 2. Selección de Normas / Objetivos intervinientes del Riesgo</p>
         <label for="denominacion" class="etiqueta">
           Criterio para la evaluación de la eficacia de los controles
         </label><br>
@@ -93,58 +73,6 @@
           <option value="MetodoP">Metodo Promedio</option>
         </select>
         <a href="#"><i class='bx bxs-help-circle bx-md'></i></a><br>
-        
-        <label for="denominacion" class="etiqueta">
-          Mostrar campos (*)
-        </label><br>
-        <table class="tablapaso02">
-          <tr style="background-color: gray;">
-            <td style="width: 25%; height: 45px;"> Mostrar Categoría de Riesgo</td>
-            <td>
-              <input type="radio" value="" name="Categoría">
-              Mostrar Campo
-              <input type="radio" value="" name="Categoría">
-              No mostrar Campo
-            </td>
-          </tr>
-          <tr style="background-color: aliceblue;">
-            <td>Mostrar Fuente del Riesgo</td>
-            <td>
-              <input type="radio" value="" name="Fuente">
-              Mostrar Campo
-              <input type="radio" value="" name="Fuente">
-              No mostrar Campo
-            </td>
-          </tr>
-          <tr style="background-color: gray;">
-            <td>Mostrar Causa</td>
-            <td>
-              <input type="radio" value="" name="Causa">
-              Mostrar Campo
-              <input type="radio" value="" name="Causa">
-              No mostrar Campo
-            </td>
-          </tr>
-          <tr style="background-color: aliceblue;">
-            <td>Mostrar Consecuencia</td>
-            <td>
-              <input type="radio" value="" name="Consecuencia">
-              Mostrar Campo
-              <input type="radio" value="" name="Consecuencia">
-              No mostrar Campo
-            </td>
-          </tr>
-          <tr style="background-color: gray;">
-            <td>Mostrar Norma con la que se relaciona el riesgo</td>
-            <td>
-              <input type="radio" name="Norma">
-              Mostrar Campo
-              <input type="radio" name="Norma">
-              No mostrar Campo
-            </td>
-          </tr>
-        </table><br>
-        
         <label for="denominacion" class="etiqueta">
           Normas / Objetivos de la Evaluación de Riesgos (*)
         </label>
@@ -162,25 +90,15 @@
             Ley 29783
           </li>
         </ol>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Continuar</button>
-      </form>
-      
       <!-- Paso 3 -->
-      <form action="">
         <p class="titulo">Paso 3. Configuración de Sedes que intervienen en la Evaluación de Riesgos</p>
         <label for="denominacion" class="etiqueta">
           Sede/s que interviene/n en la Evaluación de Riesgos (*)
         </label><br>
         <p style="margin: 20px 0px 0px 0px ;">Organización: LABORATORIOS LA COOPER</p>
         <input style="margin:  0px 0px 20px" type="checkbox" name="" id="">
-        ISO 9001<br>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Continuar</button>
-      </form>
-      
+        ISO 9001<br>      
       <!-- Paso 4 -->
-      <form action="">
         <p class="titulo">Paso 4. Selección de Procesos que intervienen en la Evaluación de Riesgos</p>
         <label for="denominacion" class="etiqueta">
           Selecciona los Procesos que Intervienen en la Evaluación (*)
@@ -201,22 +119,32 @@
           </li>
           <li>
             <input type="checkbox" name="" id="">
-            Logística
+            Area de Logística
+          </li>
+          <li>
+            <input type="checkbox" name="" id="">
+            Area de Ventas
+          </li>
+          <li>
+            <input type="checkbox" name="" id="">
+            Area de sistemas
+          </li>
+          <li>
+            <input type="checkbox" name="" id="">
+            Area de Produccion
+          </li>
+          <li>
+            <input type="checkbox" name="" id="">
+            Area de Almacen
           </li>
         </ol>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Continuar</button>
-      </form>
-      
       <!-- Paso 5 -->
-      <form action="">
         <p class="titulo">Paso 5. Configuración de Cuestionarios de Evaluación</p>
         <label for="denominacion" class="etiqueta">
           Introducción de las preguntas del cuestionario
         </label><br>
-        <textarea name="" id="" cols="30" rows="10"></textarea><br>
-        <button class="botonAzul"><i class='bx bx-rotate-left bx-xs'></i>Volver al Paso Anterior</button>
-        <button class="botonAzul" onclick="">Guardar Evaluación de Riesgos</button>
+        <div style="margin-top: 15px"><textarea name="" id="" cols="30" rows="10" style="resize: none; width: 75%; height: 200px; border-color: #0B5394; border-radius: 10px; font-size: 15px"></textarea><br></div>
+        <center><button class="botonAzul" onclick="">Guardar Riesgo</button></center>
       </form>
     </div>
   </div>
