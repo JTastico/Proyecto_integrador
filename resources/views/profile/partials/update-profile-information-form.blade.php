@@ -4,7 +4,7 @@
             {{ __('Informacion de la cuenta') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-1 text-md text-gray-600 dark:text-gray-400">
             {{ __("Cambia la informacion de tu cuenta aqui (nombre, email)") }}
         </p>
     </header>

@@ -42,7 +42,7 @@
         </div>
 
         <div class="dropdown profile-dropdown">
-          <button class="dropbtn"><i class='bx bxs-user'></i></button>
+          <button class="dropbtn"><i class='bx bxs-user bx-md'></i></button>
           <div class="dropdown-content">
             <x-responsive-nav-link :href="route('profile.edit')">{{ __('Perfil') }}</x-responsive-nav-link> 
             <form method="POST" action="{{ route('logout') }}">
