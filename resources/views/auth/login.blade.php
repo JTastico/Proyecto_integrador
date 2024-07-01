@@ -49,3 +49,103 @@
         </div>
     </div>
 </x-guest-layout>
+
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #073763;
+    font-family: Arial, sans-serif;
+    background-image: url('../../public/img/fondoLogin.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    width: 80%;
+    padding: 10px 30px 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .Recordar-olvidar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .Recordar-olvidar label {
+    font-size: 14px;
+  }
+  
+  .Recordar-olvidar a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #073763;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0a4e8e;
+  }
+  .contenedorDegradado {
+    background: linear-gradient(to right, #0000FF, #87CEFA);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+</style>

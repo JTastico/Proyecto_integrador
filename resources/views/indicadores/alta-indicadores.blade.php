@@ -23,8 +23,6 @@
 <div class="contenedorMargen">
   <div style="width: 100%; margin: 15px 0px;">
     <a href="{{ route('indicadores.create') }}" class="botonAzul">Nuevo Indicador</a>
-    <a href="{{ route('indicadores.index') }}" class="botonAzul">Historico de Indicadores</a>
-    <a href="{{ route('indicadores.index') }}" class="botonAzul">Medicion de Indicadores</a>
   </div>
 
 <!--OPCIONES DE FITLTRADO EN LA TABLA-->

@@ -19,6 +19,7 @@
   <!-- Encabezado -->
   <div class="encabezado">
     <p class="titulo" style="margin: 0px 15px; font-size: xxx-large;">Indicadores</p>
+    <div><a href="{{ route('riesgos.index') }}" class="icono" style="margin-top: 20px; margin-right: 15px"><i class='bx bx-arrow-back bx-md'></i></a></div>
   </div>
 
   <!-- Contenedor principal -->

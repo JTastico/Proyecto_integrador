@@ -16,8 +16,9 @@
 
 <body>
     <!--Encabezado-->
-    <div class="encabezado">
+    <div class="encabezado" style="display: flex;">
         <p class="titulo">Evaluación de Riesgos</p>
+        <div><a href="{{ route('riesgos.index') }}" class="icono" style="margin-top: 20px; margin-right: 15px"><i class='bx bx-arrow-back bx-md'></i></a></div>
     </div>
 
     <!--Cuerpo-->

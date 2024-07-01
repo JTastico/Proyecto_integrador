@@ -16,7 +16,9 @@
   <!-- 
     <script src="script.js"></script>--></head>
 <body>
-  <div class="encabezado"><p class="titulo">Editar Indicador</p></div>
+  <div class="encabezado"><p class="titulo">Editar Indicador</p>
+  <div><a href="{{ route('riesgos.index') }}" class="icono" style="margin-top: 20px; margin-right: 15px"><i class='bx bx-arrow-back bx-md'></i></a></div></div>
+  
   <!--Cuerpo-->
   <div class="contenedorMargen">
     <div class="contenido">

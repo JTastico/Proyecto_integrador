@@ -14,6 +14,11 @@
 </head>
 
 <body>
+  <div class="encabezado">
+    <p class="titulo">Gestión de Riesgos</p>
+    <div><a href="{{ route('riesgos.index') }}" class="icono" style="margin-top: 20px; margin-right: 15px"><i class='bx bx-arrow-back bx-md'></i></a></div>
+  </div>
+
   <div class="contenedorMargen">
     <div id="gridIndex" class="grid">
       <div id="one" class="contenedorPrincipal" style="width: 100%; height: 100%; word-break: break-all; padding: 10px;">
@@ -28,7 +33,7 @@
             </tr>
             @forelse($riesgos as $riesgo)
             <tr>
-              <td><a href="{{ route('riesgos.show', $riesgo->id) }}">Ver</a></td>
+              <td><a href="{{ route('riesgos.show', $riesgo->id) }}" class="icono"><i class='bx bx-show bx-md'></i></a></td>
               <td>{{ $riesgo->denominacion }}</td>
               <td>{{ $riesgo->estado ?? 'Pendiente' }}</td>
               <td>{{ $riesgo->created_at }}</td>
@@ -44,7 +49,7 @@
       </div>
       <!-- Mapa de riesgos -->
       <div id="two" class="contenedorGraficos" style="width: 100%; height: 470px; background-color: #F2F2F2;">
-        <p class="subTitulo">Mapa de Riesgos Inherentes</p>
+        <p class="subTitulo">Mapa de Indicadores</p>
         <table class="tablaGrafico01">
           <tr style="width: 100%;">
             <td style="width: 10%;">#text</td>
@@ -93,29 +98,7 @@
           </tr>
         </table>
       </div>
-      <!-- Mapa de riesgos residuales -->
-      <div id="three" class="contenedorPrincipal" style="width: 100%; height: 470px;">
-        <p class="subTitulo">Mapa de Riesgos Residuales</p>
-        <div class="contenedorGraficos" style="width: 95%; height: 420px; margin: 0px 2.5% 0px 2.5%;">
-          <table class="tablaRiesgosResiduales">
-            <tr>
-              <td>MUY BAJO</td>
-              <td>BAJO</td>
-              <td>MEDIO</td>
-              <td>ALTO</td>
-              <td>CRÍTICO</td>
-            </tr>
-            @foreach($riesgos as $riesgo)
-            <tr>
-              <td>{{ $riesgo->riesgo_muy_bajo }}</td>
-              <td>{{ $riesgo->riesgo_bajo }}</td>
-              <td>{{ $riesgo->riesgo_medio }}</td>
-              <td>{{ $riesgo->riesgo_alto }}</td>
-              <td>{{ $riesgo->riesgo_critico }}</td>
-            </tr>
-            @endforeach
-          </table>
-        </div>
+
       </div>
     </div>
   </div>

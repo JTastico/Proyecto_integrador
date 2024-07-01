@@ -16,6 +16,7 @@
 <body>
   <div class="encabezado">
     <p class="titulo">Nuevo Indicador</p>
+    <div><a href="{{ route('riesgos.index') }}" class="icono" style="margin-top: 20px; margin-right: 15px"><i class='bx bx-arrow-back bx-md'></i></a></div>
   </div>
 
   <!-- Contenedor principal -->
