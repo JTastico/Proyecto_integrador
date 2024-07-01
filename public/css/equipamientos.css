@@ -1,88 +1,64 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:"Saira Extra Condensed", sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;  
   }
   
-  .encabezado {
-    background-color: #0C343D;
-    color: #EDEDED;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .titulo {
-    margin: 0;
+.container {
+    width: 50%;
+    margin: 100px;
+    background-color: rgb(225, 226, 232);
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.titulo {
+    font-family: 'Roboto', sans-serif;
     font-size: xxx-large;
+    width: 50%;
+    margin: 0;
+    text-align: center;
+    color: #0a539b;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #003366;
+}
+
+input[type="text"],
+textarea {
     width: 70%;
-  }
-  
-  .contenedorMargen {
-    margin: 20px;
-  }
-  
-  .botonAzul {
-    background-color: #0b5394;
-    color: rgb(15, 73, 209);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-  }
-  
-  .botonAzul:hover {
-    background-color: #083a62;
-  }
-  
-  .botonAmarillo {
-    background-color: #f1c40f;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-  }
-  
-  .botonAmarillo:hover {
-    background-color: #d4ac0d;
-  }
-  
-  .subTitulo {
-    font-weight: 600;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .contenedorSegundario {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin: 10px 0;
-  }
-  
-  .tablaPrincipal {
-    width: 100%;
-    border-collapse: collapse;
-    margin: auto;
-  }
-  
-  .tablaPrincipal th, .tablaPrincipal td {
     padding: 10px;
-    text-align: left;
-  }
-  
-  .tablaPrincipal th {
-    background-color: #0C343D;
-    color: #EDEDED;
-    height: 40px;
-  }
-  
-  .bx {
-    color: #0b5394;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botonAzul {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    padding: 5px;
+    color: #fff;
+    background-color: #255FAD;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    padding: 6px 20px;
     cursor: pointer;
-  }
-  
+}
+
+input[type="submit"]:hover {
+    background-color: #002244;
+}

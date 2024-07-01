@@ -30,7 +30,7 @@
   <!-- Encabezado -->
   <header class="header">
     <div class="logo">
-      <p class="titulo">AIDRA</p>
+      <p class="titulo">SAE</p>
     </div>
     <nav class="nav">
       <a href="#">Inicio</a>
@@ -95,10 +95,10 @@
     <div class="section-title">REDES</div>
     <div class="section-content">
       <ul class="social-links">
-        <li><a href="#"><i class='bx bxl-github bx-flip-horizontal'></i> GitHub</a></li>
-        <li><a href="#"><i class='bx bxl-twitter'></i> Twitter</a></li>
-        <li><a href="#"><i class='bx bxl-facebook'></i> Facebook</a></li>
-        <li><a href="#"><i class='bx bxl-tiktok bx-flip-horizontal'></i> TikTok</a></li>
+        <li><a href="https://github.com/JTastico/Proyecto_integrador.git" target="_blank"><i class='bx bxl-github bx-flip-horizontal'></i> GitHub</a></li>
+        <li><a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter'></i> Twitter</a></li>
+        <li><a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i> Facebook</a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><i class='bx bxl-tiktok bx-flip-horizontal'></i> TikTok</a></li>
       </ul>
     </div>
   </section>

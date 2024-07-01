@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,18 +10,19 @@ class Riesgo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'descripcion', 'categoria_id', 'prioridad_id', 'fecha_creacion', 'fecha_actualizacion'
+        'denominacion',
+        'organizacion',
+        'dimensiones_seguridad',
+        'criterio_evaluacion',
+        'normas_objetivos',
+        'sedes',
+        'procesos',
+        'cuestionario',
     ];
 
-    protected $primaryKey = 'id';
-
-    public function categoria()
-    {
-        return $this->belongsTo(Categoria::class, 'categoria_id');
-    }
-
-    public function prioridad()
-    {
-        return $this->belongsTo(Prioridad::class, 'prioridad_id');
-    }
+    protected $casts = [
+        'normas_objetivos' => 'array',
+        'sedes' => 'array',
+        'procesos' => 'array',
+    ];
 }

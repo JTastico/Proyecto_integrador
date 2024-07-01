@@ -4,36 +4,36 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateRiesgosTable extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        // Schema::create('riesgos', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->string('name');
-        //     $table->text('description');
-        //     $table->timestamps();
-        // });
         Schema::create('riesgos', function (Blueprint $table) {
             $table->id();
             $table->string('denominacion');
-            $table->string('estado');
-            $table->date('fecha');
             $table->string('organizacion');
-            $table->string('sede');
-            $table->string('norma');
+            $table->string('dimensiones_seguridad');
+            $table->string('criterio_evaluacion');
+            $table->json('normas_objetivos');
+            $table->json('sedes');
+            $table->json('procesos');
+            $table->text('cuestionario')->nullable();
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('riesgos');
     }
-};
+}
